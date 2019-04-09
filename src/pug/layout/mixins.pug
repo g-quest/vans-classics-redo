@@ -1,0 +1,205 @@
+//- ADD YOUR MIXINS HERE
+include vars
+
+mixin imageBlock(blockID) 
+  .classics-body__img(id=blockID)
+    .classics-body__img-content
+      img.classics-body__img-image
+      p.classics-body__img-title
+      p.classics-body__img-price
+
+mixin imageBlock-noText(blockID) 
+  .classics-body__img(id=blockID)
+    .classics-body__img-content
+      img.classics-body__img-image     
+
+//- DO NOT REMOVE
+mixin VansHeader
+    .header-container
+        .contain-to-grid.contain-to-grid-js
+            .master-header
+                nav.top-bar.top-bar-js
+                    ul.title-area
+                        li.name
+                            nav.store-logo
+                                a
+                                    div.header-logo
+                        li.menu-topbar.search-topbar
+                            i.search-icon.icon-search
+                        li.menu-topbar.locator-topbar
+                            a
+                                i.locator-icon.icon-location
+                        li.menu-topbar.cart-topbar
+                            a
+                                span.cart-icon.icon-shopcart
+                                    span.cart-items-count
+                        li.menu-topbar.toggle-topbar
+                            a
+                                i.menu-icon.icon-menu
+
+                    section.topnav.top-bar-section
+                        div.lower-container(style="overflow: visible;")
+
+                            ul.topnav-main.right.lower(style="max-width: 993px; min-width: 0px; width: auto;")
+                                li.topnav-main-item.visible-nav-item
+                                    a Shop
+                                li.topnav-main-item.visible-nav-item.has-dropdown-custom
+                                    a Mens
+                                li.topnav-main-item.visible-nav-item.has-dropdown-custom
+                                    a Womens
+                                li.topnav-main-item.visible-nav-item.has-dropdown-custom
+                                    a More
+
+                        ul.topnav-util.right.upper.topnav-util-js
+                            li.topnav-util-item.unav-1
+                                a
+                                    span.icon.icon-help
+                                    span.hide-for-medium-only Order Status
+                            li.topnav-util-item.unav-2
+                                a
+                                    span.icon.icon-location
+                                    span.hide-for-medium-only Find Store
+                            li.topnav-util-item.unav-3
+                                a
+                                    span.icon.icon-gift-card
+                                    span.hide-for-medium-only Gift Card
+                            li.topnav-util-item
+                                a
+                                    span.icon.icon-chat
+                                    span.hide-for-medium-only Live Chat
+                            li.topnav-util-item
+                                a
+                                    span.icon.icon-loyalty-program
+                                    span.hide-for-medium-only Join Vans Family
+
+                .search-form-container
+                    form.menu-content.search-form-js
+                        .search-container
+                            .topbar-search-form.hide
+                                span.dropdown-arrow
+                                .search-input-container
+                                    input(class="formPlaceHolder header-search-term-input-js search-input-js")
+                                .search-button-container
+                                    input(class="search-button search-button-mobile-js")
+                        a.postfix.search-button
+                            span.icon-search
+    .page-util
+        .page-util-container
+            #espot-header
+                .espot-container
+                    .promo-content Free Shipping & Returns!
+                        span.offer
+                            a.promo-detail-btn Details
+
+mixin VansFooter
+    .footerpage.contentpage.page
+        footer.extended
+            .footer.splitcolumnfooter
+                .footer-content-wrap
+                    .footer-content.row
+                        .small-12.medium-2.large-2.medium-offset-1.large-offset-1.columns
+                            .footer_col1.footer_col
+                                .heading Shop
+                                .column-content
+                                    .subheading By Category
+                                    ul
+                                        li
+                                            a Shop Home
+                                        li
+                                            a Mens
+                                        li
+                                            a Womens
+                                        li
+                                            a Kids
+                                        li
+                                            a Classics
+                        .small-12.medium-2.large-2.columns
+                            .footer_col2.footer_col
+                                .heading Sports
+                                .column-content
+                                    ul
+                                        li
+                                            a Skate
+                                        li
+                                            a Surf
+                                        li
+                                            a Women's Surf
+                                        li
+                                            a Snow
+                                        li
+                                            a BMX
+                        .small-12.medium-2.large-2.columns
+                            .footer_col3.footer_col
+                                .heading Support
+                                .column-content
+                                    ul
+                                        li
+                                            a FAQ's
+                                        li
+                                            a Store Locator
+                        .small-12.medium-2.large-2.columns
+                            .footer_col4.footer_col
+                                .heading Company
+                                .column-content
+                                    ul
+                                        li
+                                            a Terms of Use
+                                        li
+                                            a Privacy
+                                        li
+                                            a Careers
+                                        li
+                                            a About
+                                        li
+                                            a CA Supply Chains Act
+                                        li
+                                            a Sustainability
+                                        li
+                                            a Affiliates
+                                        li
+                                            a Recall Info
+
+                        .small-12.medium-2.large-2.columns.end
+                            .footer_col5.footer_col
+                                .heading Contact
+                                .column-content
+                                    ul
+                                        li
+                                            a Contact us
+                                        li
+                                            a Order Status
+                                    ul
+                                        li.subheading Address
+                                        li 1588 South Coast Dr <br /> Costa Mesa, CA 92626
+                                    ul
+                                        li.subheading Hours
+                                        li M - F 6:00am - 8:00pm PST
+
+                    .footer-extra
+                        .row
+                            .large-3.large-offset-1.medium-4.medium-offset-0.columns.text-left.footer-locator
+                                .footer_store_locator
+                                    .heading Store Locator
+                                    p.show-for-large Find a Vans store near you
+                                    a.button.primary.expand Find A Store
+                            .large-4.medium-4.columns.text-left.footer-social
+                                .footer_social_link
+                                    .heading Follow Vans
+                                    a.social-icon.icon-facebook
+                                    a.social-icon.icon-twitter
+                                    a.social-icon.icon-youtube
+                                    a.social-icon.icon-instagram
+                                    a.social-icon.icon-pinterest
+                                    a.social-icon.icon-tumblr
+                                    a.social-icon.icon-wanelo
+
+                            .large-3.medium-4.columns.text-left.footer-signup.end
+                                .footer_email_signup
+                                    form
+                                    .heading Subscribe
+                                    p.show-for-large Receive product news and updates in your inbox.
+                                    .row.collapse
+                                        .small-12.input-group
+                                            input.email.input-group-field()
+                                            button.input-group-button
+                                                span.icon-arrow-right-indicator-open

@@ -1,0 +1,149 @@
+{
+	"css": {
+		"onsite": [
+			"https://www.vans.com/etc/designs/vfcorp/vans/clientlibs/global/css/global-cms.css?4-26-21214-c55f268c7e72",
+			"//www.vans.com/ns/vans/projects/customs/css/app.css?v06"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.3.1",
+		"@babel/register": "^7.0.0",
+		"@types/gsap": "^1.20.1",
+		"@types/jquery": "^3.3.29",
+		"@typescript-eslint/eslint-plugin": "^1.4.0",
+		"beepbeep": "^1.2.2",
+		"browser-sync": "^2.24.5",
+		"cfonts": "^2.4.2",
+		"chalk": "^2.4.2",
+		"del": "^3.0.0",
+		"eslint": "^5.14.1",
+		"eslint-config-prettier": "^4.0.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"git-push": "^0.1.1",
+		"glob": "^7.1.2",
+		"gulp": "^4.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-cli": "^2.0.1",
+		"gulp-concat": "^2.6.0",
+		"gulp-css-count": "^0.2.0",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-cssstats": "^1.0.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-load-plugins": "^1.5.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-prettier": "^2.1.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-pugbem": "^2.1.3",
+		"gulp-remove-html": "^1.1.2",
+		"gulp-rename": "^1.3.0",
+		"gulp-sass": "^4",
+		"gulp-sizereport": "^1.2.1",
+		"gulp-stylelint": "^8.0.0",
+		"gulp-tslint": "^8.1.3",
+		"gulp-typescript": "^4.0.2",
+		"gulp-uglify": "^3.0.0",
+		"imagemin-giflossy": "^5.1.10",
+		"imagemin-mozjpeg": "^8.0.0",
+		"imagemin-pngquant": "^7.0.0",
+		"plugin-error": "^1.0.1",
+		"postcss-grid-kiss": "^2.1.1",
+		"postcss-load-config": "^2.0.0",
+		"postcss-plugin": "^1.0.0",
+		"postcss-preset-env": "^6.5.0",
+		"postcss-scss": "^2.0.0",
+		"prettier": "^1.16.4",
+		"run-sequence": "^2.2.1",
+		"stylelint": "^9.10.1",
+		"stylelint-config-prettier": "^4.0.0",
+		"stylelint-config-recommended": "^2.1.0",
+		"stylelint-config-recommended-scss": "^3.2.0",
+		"stylelint-prettier": "^1.0.6",
+		"stylelint-scss": "^3.5.3",
+		"sugarss": "^2.0.0",
+		"through2": "^2.0.1",
+		"ts-loader": "^4.4.1",
+		"tslint": "^5.12.1",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"typescript": "^3.3.3333"
+	},
+	"directories": {
+		"archive": "archive",
+		"preview": "preview",
+		"fb": "fb",
+		"src": "src",
+		"output": "aem-output"
+	},
+	"js": {
+		"onsite": [
+			"//use.typekit.net/jhn5vye.js",
+			"//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+		]
+	},
+	"license": "(ISC OR GPL-3.0)",
+	"name": "vans-boilerplate",
+	"private": true,
+	"repository": {
+		"type": "git"
+	},
+	"requirejs": {
+		"paths": {
+			"TweenMax": "https://www.vans.com/ns/vans/js/TweenMax",
+			"morphsvg": "https://f7c9cd6ad422c1ae45c2-d8c90e4b1f6c482dcf4945460a0e4e67.ssl.cf2.rackcdn.com/gsap/plugins/MorphSVGPlugin.min",
+			"vansloader": "https://f7c9cd6ad422c1ae45c2-d8c90e4b1f6c482dcf4945460a0e4e67.ssl.cf2.rackcdn.com/vans-loader-jquery",
+			"pageJS": "https://cdnjs.cloudflare.com/ajax/libs/page.js/1.11.4/page",
+			"navigo": "https://njot1.vans.com/fed_test/navigo"
+		},
+		"shim": {
+			"TweenMax": {
+				"deps": [
+					"jquery"
+				],
+				"exports": "TweenMax"
+			},
+			"morphsvg": {
+				"deps": [
+					"TweenMax"
+				],
+				"exports": "MorphSVGPLugin"
+			},
+			"vansloader": {
+				"deps": [
+					"morphsvg"
+				],
+				"exports": "jQuery.VansLoader"
+			},
+			"navigo": {
+				"deps": [
+					"jquery"
+				],
+				"exports": "Navigo"
+			}
+		}
+	},
+	"postcss": {
+		"map": true,
+		"plugins": {
+			"postcss-plugin": {},
+			"postcss-grid-kiss": {},
+			"postcss-preset-env": {
+				"browsers": [
+					"last 3 versions"
+				]
+			}
+		}
+	},
+	"scene7": "//images.vans.com/is/image/VansBrand",
+	"scripts": {
+		"build": "gulp --silent"
+	},
+	"version": "6.0.0",
+	"dependencies": {
+		"postcss-cssstats": "^1.0.0",
+		"postcss-stats-reporter": "^0.4.1",
+		"types": "^0.1.1",
+		"types-installer": "^1.6.1"
+	}
+}

@@ -1,0 +1,25 @@
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+$break-small: 760px;
+$extra-break-small: 640px;
+$break-medium: 1024px;
+
+$md-mobile: 'only screen and (max-width: ' + $break-small + ')';
+
+$body-text: 'franklin-gothic-urw-cond', 'Arial Narrow Bold', Arial, sans-serif;
+
+$xlarge-headline-size: em(80);
+$headline-size: em(32);
+$large-size: em(24);
+$btn-text: em(20);
+$medium-size: em(16);
+$small-size: em(12);
+
+$red: #ff0029;
+$vans-red: #c9192e;
+$grey: #c5c5c5;
+$darkened-red: darken($red, 20%);

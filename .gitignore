@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+node_modules
+_assets
+aem-output
+preview
+notes
+package-lock.json
+shrinkwrap.yaml
+alt.js
+.idea

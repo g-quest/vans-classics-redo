@@ -1,0 +1,7 @@
+{
+  "description": "Vans Boilerplate Compiler",
+  "flags": {
+    "gulpfile" : "gulpfile.babel.js",
+    "silent": true
+  }
+}

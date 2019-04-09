@@ -1,0 +1,63 @@
+extends layout/layout
+
+block main
+  .classics-container
+    
+    .classics-header
+      .classics-header__title
+        .classics-header__title-bg1
+          img(src="../img/s19-core-classics-paper-2.jpg")
+        .classics-header__title-bg2
+          img(src="../img/s19-core-classics-paper-1.jpg")     
+        .classics-header__title-text--top
+          h1 This
+        .classics-header__title-text--middle
+          h1 is the
+        .classics-header__title-text--bottom
+          h1 
+        .classics-header__title-text--bottom-shoe
+          h1 
+            
+      .classics-header__imgs
+        .classics-header__img
+          img(id="classics-header__img--1")
+        .classics-header__img
+          img(id="classics-header__img--2" )
+        .classics-header__img
+          img(id="classics-header__img--3")
+       
+    .classics-subnav 
+      .classics-subnav__wrapper
+        .classics-subnav--left
+          a(id="all-shoes" class="classics-subnav__link" href="/") All
+          |  / 
+          a(class="classics-subnav__link" href="#era") Era
+        .classics-subnav--right
+          a(class="classics-subnav__link" href="https://www.vans.com/utility/store-locator.html") FIND A DEALER
+          a(class="classics-subnav__button" href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  
+        
+    .classics-description
+      
+    .classics-body
+      +imageBlock('img1')
+      +imageBlock('img2')
+      +imageBlock('img3')
+      +imageBlock-noText('img4')
+      +imageBlock-noText('img5')
+      +imageBlock('img6')
+                   
+            
+    .classics-body(style="margin-top: 75px")
+      +imageBlock('img7')
+      +imageBlock('img8')
+      +imageBlock-noText('img9')
+      +imageBlock('img10')
+      +imageBlock('img11')
+      +imageBlock('img12')      
+      +imageBlock('img13')
+      +imageBlock('img14')
+      +imageBlock-noText('img15')
+                        
+    .classics-subfooter
+      a(href="https://www.vans.com/shop/shoes-classics-original-classics")
+        .button(class="classics-subfooter__button")

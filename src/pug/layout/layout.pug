@@ -1,0 +1,48 @@
+include mixins
+|<!--<Deject>-->
+doctype html
+html(lang="en")
+    head
+        title=title
+
+        meta(charset = "utf-8" )
+        meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+
+        each i in css.onsite
+            link(rel="stylesheet",href=i,type='text/css')
+
+        //- icomoon reference due to CORS issues with on-site reference
+        style.
+            @font-face {
+                font-family: "icomoon";
+                src: url("/fonts/icomoon.ttf") format("ttf"),
+                url("/fonts/icomoon.woff") format("woff");
+            }
+
+        link(rel="stylesheet",href="css/app.css",type='text/css')
+
+
+    body
+
+        +VansHeader()
+
+        | <!--</Deject>-->
+
+        block main
+
+        | <!--<Deject>-->
+
+        +VansFooter()
+
+        each i in js.onsite
+            script(src=i)
+        each k,v in requirejs.paths
+            script(src=k + ".js")
+
+
+        script(src="js/app.js")
+
+
+        script
+            | try {Typekit.load();} catch (e) {}
+| <!--<Deject>-->
