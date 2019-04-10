@@ -27,7 +27,7 @@ block main
           img(id="classics-header__img--3")
        
     .classics-subnav 
-      .classics-subnav__wrapper
+      .classics-subnav__wrapper#links
         .classics-subnav--left
           a(id="all-shoes" class="classics-subnav__link" href="/") All
           |  / 
@@ -35,6 +35,20 @@ block main
         .classics-subnav--right
           a(class="classics-subnav__link" href="https://www.vans.com/utility/store-locator.html") FIND A DEALER
           a(class="classics-subnav__button" href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  
+          a(href="javascript:void(0);" class="icon" onclick="myFunction()") MENU
+          
+    //- button.classics-subnav--mobile Menu
+    //- .classics-subnav--mobile__links(id="subnav-links")
+    //-     ul
+    //-       li
+    //-         a(href='/') ALL
+    //-       li
+    //-         a(href='#era') ERA
+    //-       li
+    //-         a(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER 
+    //-       li
+    //-         a.classics-subnav--mobile__button(href='https://www.vans.com/shop/shoes-classics-original-classics') SHOP NOW 
+          
         
     .classics-description
       
@@ -47,7 +61,7 @@ block main
       +imageBlock('img6')
                    
             
-    .classics-body(style="margin-top: 75px")
+    .classics-body
       +imageBlock('img7')
       +imageBlock('img8')
       +imageBlock-noText('img9')

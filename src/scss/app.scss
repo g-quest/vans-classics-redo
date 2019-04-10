@@ -31,7 +31,6 @@ img {
 	background-position: center;
 	background-repeat: repeat-y;
 	background-size: contain;
-	width: 100%;
 }
 
 .classics-header {
@@ -125,6 +124,9 @@ img {
 }
 
 .classics-subnav {
+	@media #{$md-mobile} {
+		display: none;
+	}
 	position: relative;
 	background-color: black;
 	color: white;
@@ -166,7 +168,9 @@ img {
 		right: 100px;
 	}
 }
-
+.classics-subnav__wrapper .icon {
+	display: none;
+}
 .classics-description {
 	position: relative;
 	width: 80%;
@@ -181,6 +185,11 @@ img {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 30px;
 	padding: 50px 0 0 0;
+	@media #{$md-mobile} {
+		padding: 25px 0 0 0;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
 	&__img {
 		display: grid;
 		&-content {
@@ -214,6 +223,6 @@ img {
 		max-width: 500px;
 		padding: 25px 0;
 		-webkit-transform: translateY(125%);
-		        transform: translateY(125%);
+		transform: translateY(125%);
 	}
 }
