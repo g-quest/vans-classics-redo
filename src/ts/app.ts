@@ -55,6 +55,11 @@ router
 				minWidth: '400px'
 			});
 
+		$('.classics-header__title-text--bottom h1').css({
+			display: 'block'
+		});
+		$('.classics-header__title-text--bottom-shoe h1').text('');
+
 		$('.classics-description')
 			.text('')
 			.css({ marginTop: '50px' });
@@ -100,7 +105,8 @@ router
 			});
 			$('#img2 .classics-body__img-content').css({
 				justifySelf: 'start',
-				width: '75%'
+				width: '75%',
+				transform: 'translateY(0)'
 			});
 		} else {
 			$('#img2.classics-body__img').css({
@@ -125,7 +131,8 @@ router
 			});
 			$('#img3 .classics-body__img-content').css({
 				justifySelf: 'start',
-				width: '75%'
+				width: '75%',
+				transform: 'translateY(0)'
 			});
 		} else {
 			$('#img3.classics-body__img').css({
@@ -201,7 +208,8 @@ router
 			$('#img6 .classics-body__img-content').css({
 				justifySelf: 'start',
 				margin: '10% auto auto 15%',
-				width: '50%'
+				width: '50%',
+				transform: 'translateY(0)'
 			});
 		} else {
 			$('#img6.classics-body__img').css({
@@ -667,7 +675,7 @@ router
 			$('#img6 .classics-body__img-content').css({
 				justifySelf: 'start',
 				width: '60%',
-				transform: 'translate(0, 55%)'
+				transform: 'translateY(55%)'
 			});
 		} else {
 			$('#img6.classics-body__img').css({
@@ -938,14 +946,29 @@ router
 /*******************/
 
 /* Change text automatically on 'ALL' page */
-let textIndex: number = 1;
+let textIndex: number = 0;
+const text = ['Era.', 'Sk8-Hi.', 'Slip-On.', 'Authentic.', 'Old-Skool.'];
+let textIndexLength: number = text.length;
 function changeText(): void {
-	const text = ['Era.', 'Sk8-Hi.', 'Slip-On.', 'Authentic.', 'Old-Skool.'];
 	textIndex++;
-	if (textIndex > text.length) {
+	if (textIndex > textIndexLength) {
 		textIndex = 1;
 	}
 	document.querySelector(
 		'.classics-header__title-text--bottom h1'
 	).textContent = text[textIndex - 1];
 }
+
+// Sticky subnav
+const subnav = document.getElementById('subnav');
+const sticky = subnav.offsetTop;
+function navbarStick() {
+	if (window.pageYOffset >= 610) {
+		subnav.classList.add('sticky');
+	} else {
+		subnav.classList.remove('sticky');
+	}
+}
+window.onscroll = () => {
+	navbarStick();
+};

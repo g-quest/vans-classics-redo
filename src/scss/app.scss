@@ -226,3 +226,14 @@ img {
 		transform: translateY(125%);
 	}
 }
+
+.sticky {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .classics-description{
+	padding-top: 40px;
+}
