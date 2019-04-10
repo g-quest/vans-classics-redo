@@ -521,45 +521,60 @@ router
 		);
 
 		// first image
-		$('#img1.classics-body__img').css({
-			gridArea: '1 / 1 / span 2 / 3'
-		});
-		$('#img1 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '75%'
-		});
 		$('#img1 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-5?wid=1072&fmt=png-alpha'
 		);
 		$('#img1 .classics-body__img-title').text('Era');
 		$('#img1 .classics-body__img-price').text('$65.00');
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img1.classics-body__img').css({
+				gridArea: '1 / 1 / span 2 / 3'
+			});
+			$('#img1 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '75%'
+			});
+		} else {
+			$('#img1.classics-body__img').css({
+				gridArea: '1 / 1 / 3 / 3'
+			});
+			$('#img1 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px',
+				marginTop: '10px'
+			});
+		}
 
 		// second image
-		$('#img2.classics-body__img').css({
-			gridArea: '3 / 3 / 4 / 4'
-		});
-		$('#img2 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '75%',
-			transform: 'translateY(-25%)'
-		});
 		$('#img2 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-1?wid=1072&fmt=png-alpha'
 		);
 		$('#img2 .classics-body__img-title').text('Era');
 		$('#img2 .classics-body__img-price').text('$65.00');
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img2.classics-body__img').css({
+				gridArea: '3 / 3 / 4 / 4'
+			});
+			$('#img2 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '75%',
+				transform: 'translateY(-25%)'
+			});
+		} else {
+			$('#img2.classics-body__img').css({
+				gridArea: '3 / 1 / 4 / 2'
+			});
+			$('#img2 .classics-body__img-content').css({
+				width: '100%',
+				padding: '0 10px',
+				transform: 'translateY(0)'
+			});
+		}
 
 		// third image
-		$('#img3.classics-body__img').css({
-			gridArea: '3 / 4 / 4 / 5'
-		});
-		$('#img3 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '75%',
-			transform: 'translateY(-25%)'
-		});
 		$('#img3 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-4?wid=1072&fmt=png-alpha'
@@ -567,42 +582,77 @@ router
 		$('#img3 .classics-body__img-title').text('Era');
 		$('#img3 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img3.classics-body__img').css({
+				gridArea: '3 / 4 / 4 / 5'
+			});
+			$('#img3 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '75%',
+				transform: 'translateY(-25%)'
+			});
+		} else {
+			$('#img3.classics-body__img').css({
+				gridArea: '3 / 2 / 4 / 3'
+			});
+			$('#img3 .classics-body__img-content').css({
+				width: '100%',
+				padding: '0 10px',
+				transform: 'translateY(0)'
+			});
+		}
+
 		// fourth image
-		$('#img4.classics-body__img').css({
-			gridArea: '1 / 3 / 3 / 5'
-		});
-		$('#img4 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '85%'
-		});
 		$('#img4 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-5?wid=1504&fmt=png-alpha'
 		);
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img4.classics-body__img').css({
+				gridArea: '1 / 3 / 3 / 5'
+			});
+			$('#img4 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '85%'
+			});
+		} else {
+			$('#img4.classics-body__img').css({
+				gridArea: '4 / 1 / 6 / 3'
+			});
+			$('#img4 .classics-body__img-content').css({
+				width: '100%',
+				padding: '10px',
+				transform: 'translateY(0)'
+			});
+		}
 
 		// fifth image
-		$('#img5.classics-body__img').css({
-			gridArea: '3 / 1 / 4 / 3'
-		});
-		$('#img5 .classics-body__img-content').css({
-			margin: '0 auto',
-			width: '50%',
-			transform: 'translate(25%, 10%)'
-		});
 		$('#img5 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-6?wid=906&fmt=png-alpha'
 		);
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img5.classics-body__img').css({
+				gridArea: '3 / 1 / 4 / 3'
+			});
+			$('#img5 .classics-body__img-content').css({
+				margin: '0 auto',
+				width: '50%',
+				transform: 'translate(25%, 10%)'
+			});
+		} else {
+			$('#img5.classics-body__img').css({
+				gridArea: '8 / 1 / 10 / 3'
+			});
+			$('#img5 .classics-body__img-content').css({
+				width: '100%',
+				padding: '10px 50px',
+				transform: 'translateY(0)'
+			});
+		}
+
 		// sixth image
-		$('#img6.classics-body__img').css({
-			gridArea: '3 / 3 / 4 / 5'
-		});
-		$('#img6 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '60%',
-			transform: 'translate(0, 55%)'
-		});
 		$('#img6 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-6?wid=561&fmt=png-alpha'
@@ -610,15 +660,27 @@ router
 		$('#img6 .classics-body__img-title').text('Era');
 		$('#img6 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img6.classics-body__img').css({
+				gridArea: '3 / 3 / 4 / 5'
+			});
+			$('#img6 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '60%',
+				transform: 'translate(0, 55%)'
+			});
+		} else {
+			$('#img6.classics-body__img').css({
+				gridArea: '6 / 1 / 8 / 3'
+			});
+			$('#img6 .classics-body__img-content').css({
+				width: '100%',
+				padding: '10px',
+				transform: 'translateY(0)'
+			});
+		}
+
 		// seventh image
-		$('#img7.classics-body__img').css({
-			gridArea: '1 / 1 / 2 / 2'
-		});
-		$('#img7 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '75%',
-			transform: 'translateX(30%)'
-		});
 		$('#img7 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-7?wid=1072&fmt=png-alpha'
@@ -626,45 +688,80 @@ router
 		$('#img7 .classics-body__img-title').text('Era');
 		$('#img7 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img7.classics-body__img').css({
+				gridArea: '1 / 1 / 2 / 2'
+			});
+			$('#img7 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '75%',
+				transform: 'translateX(30%)'
+			});
+		} else {
+			$('#img7.classics-body__img').css({
+				gridArea: '1 / 1 / 2 / 2'
+			});
+			$('#img7 .classics-body__img-content').css({
+				width: '100%',
+				padding: '0 10px',
+				transform: 'translateX(0)'
+			});
+		}
+
 		// eighth image
-		$('#img8.classics-body__img').css({
-			gridArea: '1 / 4 / 2 / 5'
-		});
-		$('#img8 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '75%',
-			transform: 'translateX(-10%)'
-		});
 		$('#img8 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-8?wid=583&fmt=png-alpha'
 		);
 		$('#img8 .classics-body__img-title').text('Era');
 		$('#img8 .classics-body__img-price').text('$65.00');
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img8.classics-body__img').css({
+				gridArea: '1 / 4 / 2 / 5'
+			});
+			$('#img8 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '75%',
+				transform: 'translateX(-10%)'
+			});
+		} else {
+			$('#img8.classics-body__img').css({
+				gridArea: '1 / 2 / 2 / 3'
+			});
+			$('#img8 .classics-body__img-content').css({
+				width: '100%',
+				padding: '0 10px',
+				transform: 'translateX(0)'
+			});
+		}
 
 		// ninth image
-		$('#img9.classics-body__img').css({
-			gridArea: '1 / 2 / 3 / 4'
-		});
-		$('#img9 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '90%',
-			transform: 'translateX(10%)'
-		});
 		$('#img9 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha'
 		);
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img9.classics-body__img').css({
+				gridArea: '1 / 2 / 3 / 4'
+			});
+			$('#img9 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '90%',
+				transform: 'translateX(10%)'
+			});
+		} else {
+			$('#img9.classics-body__img').css({
+				gridArea: '2 / 1 / 4 / 3'
+			});
+			$('#img9 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px',
+				margin: '20px 0'
+			});
+		}
 
 		// tenth image
-		$('#img10.classics-body__img').css({
-			gridArea: '3 / 1 / 4 / 2'
-		});
-		$('#img10 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '130%',
-			transform: 'translate(-5%, 45%)'
-		});
 		$('#img10 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-7?wid=549&fmt=png-alpha'
@@ -672,15 +769,28 @@ router
 		$('#img10 .classics-body__img-title').text('');
 		$('#img10 .classics-body__img-price').text('');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img10.classics-body__img').css({
+				gridArea: '3 / 1 / 4 / 2'
+			});
+			$('#img10 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '130%',
+				transform: 'translate(-5%, 45%)'
+			});
+		} else {
+			$('#img10.classics-body__img').css({
+				gridArea: '6 / 1 / 8 / 3'
+			});
+			$('#img10 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px',
+				marginBottom: '20px'
+			});
+		}
+
 		// eleventh image
-		$('#img11.classics-body__img').css({
-			gridArea: '2 / 2 / 5 / 4'
-		});
-		$('#img11 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '80%',
-			transform: 'translate(-5%, 15%)'
-		});
 		$('#img11 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-3?wid=1072&fmt=png-alpha'
@@ -688,15 +798,27 @@ router
 		$('#img11 .classics-body__img-title').text('Era');
 		$('#img11 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img11.classics-body__img').css({
+				gridArea: '2 / 2 / 5 / 4'
+			});
+			$('#img11 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '80%',
+				transform: 'translate(-5%, 15%)'
+			});
+		} else {
+			$('#img11.classics-body__img').css({
+				gridArea: '4 / 1 / 6 / 3'
+			});
+			$('#img11 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px'
+			});
+		}
+
 		// twelfth image
-		$('#img12.classics-body__img').css({
-			gridArea: '3 / 4 / 4 / 5'
-		});
-		$('#img12 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '75%',
-			transform: 'translate(-40%, 15%)'
-		});
 		$('#img12 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-2?wid=1072&fmt=png-alpha'
@@ -704,15 +826,27 @@ router
 		$('#img12 .classics-body__img-title').text('Era');
 		$('#img12 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img12.classics-body__img').css({
+				gridArea: '3 / 4 / 4 / 5'
+			});
+			$('#img12 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '75%',
+				transform: 'translate(-40%, 15%)'
+			});
+		} else {
+			$('#img12.classics-body__img').css({
+				gridArea: '8 / 1 / 10 / 2'
+			});
+			$('#img12 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px'
+			});
+		}
+
 		// thirteenth image
-		$('#img13.classics-body__img').css({
-			gridArea: '4 / 1 / 5 / 3'
-		});
-		$('#img13 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '65%',
-			transform: 'translate(15%, 70%)'
-		});
 		$('#img13 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-9?wid=548&fmt=png-alpha'
@@ -720,15 +854,27 @@ router
 		$('#img13 .classics-body__img-title').text('Era');
 		$('#img13 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img13.classics-body__img').css({
+				gridArea: '4 / 1 / 5 / 3'
+			});
+			$('#img13 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '65%',
+				transform: 'translate(15%, 70%)'
+			});
+		} else {
+			$('#img13.classics-body__img').css({
+				gridArea: '12 / 1 / 14 / 3'
+			});
+			$('#img13 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 50px'
+			});
+		}
+
 		// fourteenth image
-		$('#img14.classics-body__img').css({
-			gridArea: '4 / 3 / 5 / 4'
-		});
-		$('#img14 .classics-body__img-content').css({
-			justifySelf: 'start',
-			width: '75%',
-			transform: 'translate(-35%, 60%)'
-		});
 		$('#img14 .classics-body__img-image').attr(
 			'src',
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-10?wid=1072&fmt=png-alpha'
@@ -736,19 +882,52 @@ router
 		$('#img14 .classics-body__img-title').text('Era');
 		$('#img14 .classics-body__img-price').text('$65.00');
 
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img14.classics-body__img').css({
+				gridArea: '4 / 3 / 5 / 4'
+			});
+			$('#img14 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '75%',
+				transform: 'translate(-35%, 60%)'
+			});
+		} else {
+			$('#img14.classics-body__img').css({
+				gridArea: '8 / 2 / 10 / 3'
+			});
+			$('#img14 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px'
+			});
+		}
+
 		// fifteenth image
-		$('#img15.classics-body__img').css({
-			gridArea: '4 / 3 / 5 / 5'
-		});
-		$('#img15 .classics-body__img-content').css({
-			justifySelf: 'end',
-			width: '65%',
-			transform: 'translate(-5%, 5%)'
-		});
 		$('#img15 .classics-body__img-image').attr(
 			'src',
 			'http://0bcaec7ece69371763f5-b1bcbcfde69c8ed350e6ba506c5f8d5c.r72.cf1.rackcdn.com/s19-core-classics-era-4.gif'
 		);
+
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			$('#img15.classics-body__img').css({
+				gridArea: '4 / 3 / 5 / 5'
+			});
+			$('#img15 .classics-body__img-content').css({
+				justifySelf: 'end',
+				width: '65%',
+				transform: 'translate(-5%, 5%)'
+			});
+		} else {
+			$('#img15.classics-body__img').css({
+				gridArea: '10 / 1 / 12 / 3'
+			});
+			$('#img15 .classics-body__img-content').css({
+				justifySelf: 'start',
+				width: '100%',
+				padding: '0 10px',
+				marginBottom: '10px '
+			});
+		}
 
 		$('.classics-subfooter__button').text('SHOP ALL ERAS');
 	})
