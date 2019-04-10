@@ -170,6 +170,9 @@ img {
 			color: white;
 			font-size: 0.9rem;
 			font-weight: 500;
+			&:hover {
+				color: white;
+			}
 		}
 		&--shop {
 			background-color: $vans-red;
@@ -291,11 +294,14 @@ img {
 	top: 0;
 	width: 100%;
 }
-
-.sticky + .classics-description {
-	padding-top: 40px;
-}
+//
+// .sticky + .classics-description {
+// 	padding-top: 50px;
+// }
 
 .sticky + .classics-subnav--mobile__wrapper {
-	padding-top: 40px;
+	padding-top: 50px;
+	@media #{$md-mobile} {
+		padding-top: 40px;
+	}
 }

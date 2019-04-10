@@ -11,7 +11,17 @@ let router = new Navigo(root, useHash, hash);
 router
 	.on('/', () => {
 		console.log('This is all');
-		$('#all-shoes').css('color', '#c9192e');
+		// $('.all-shoes').css('color', '#c9192e');
+		// $('.era-shoes')
+		// 	.css('color', 'white')
+		// 	.mouseover(() => {
+		// 		$('.era-shoes').css('color', '#c9192e');
+		// 	})
+		// 	.mouseout(() => {
+		// 		$('.era-shoes').css('color', 'white');
+		// 	});
+		$('.all-shoes').css('color', '#c9192e');
+		$('.era-shoes').css('color', 'white');
 
 		$('#classics-header__img--1')
 			.attr(
@@ -489,7 +499,18 @@ router
 router
 	.on('era', () => {
 		console.log('This is era');
-		$('#all-shoes').css('color', 'white');
+
+		// $('.all-shoes')
+		// 	.css('color', 'white')
+		// 	.mouseover(() => {
+		// 		$('.all-shoes').css('color', '#c9192e');
+		// 	})
+		// 	.mouseout(() => {
+		// 		$('.all-shoes').css('color', 'white');
+		// 	});
+		// $('.era-shoes').css('color', '#c9192e');
+		$('.all-shoes').css('color', 'white');
+		$('.era-shoes').css('color', '#c9192e');
 
 		$('#classics-header__img--1')
 			.attr(
@@ -985,7 +1006,12 @@ function navbarStickMobile() {
 		mobileSubnav.classList.remove('sticky');
 	}
 }
-window.onscroll = () => {
-	navbarStick();
-	navbarStickMobile();
-};
+if (window.matchMedia('(max-width: 760px)').matches) {
+	window.onscroll = () => {
+		navbarStickMobile();
+	};
+} else {
+	window.onscroll = () => {
+		navbarStick();
+	};
+}
