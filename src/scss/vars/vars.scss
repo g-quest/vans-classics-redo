@@ -9,6 +9,7 @@ $extra-break-small: 640px;
 $break-medium: 1024px;
 
 $md-mobile: 'only screen and (max-width: ' + $break-small + ')';
+$md-desktop: 'only screen and (min-width: 761px)';
 
 $body-text: 'franklin-gothic-urw-cond', 'Arial Narrow Bold', Arial, sans-serif;
 

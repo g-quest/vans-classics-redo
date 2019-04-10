@@ -123,6 +123,67 @@ img {
 	}
 }
 
+.classics-subnav--mobile {
+	@media #{$md-mobile} {
+		display: grid;
+	}
+	display: none;
+	cursor: default;
+	background-color: black;
+	color: white;
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	height: 40px;
+	width: 100%;
+	margin-bottom: -15px;
+	&--text {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin: auto 0;
+	}
+	&--icon {
+		margin: auto 0 auto 10px;
+		width: 20px;
+	}
+	&__wrapper {
+		@media #{$md-desktop} {
+			padding-top: 0px;
+		}
+		margin-top: 0;
+		padding-top: 15px;
+		background: black;
+		&--ul {
+			margin-left: 0;
+		}
+		&--item,
+		&--shop {
+			display: none;
+			list-style: none;
+			text-align: center;
+			margin: 5px auto;
+		}
+		&--link {
+			text-decoration: none;
+			color: white;
+			font-size: 0.9rem;
+			font-weight: 500;
+		}
+		&--shop {
+			background-color: $vans-red;
+			height: 40px;
+			padding-top: 8px;
+			-webkit-transition: ease-in-out 0.2s;
+			transition: ease-in-out 0.2s;
+			&:hover {
+				background-color: black;
+			}
+		}
+	}
+}
+
 .classics-subnav {
 	@media #{$md-mobile} {
 		display: none;
@@ -167,9 +228,6 @@ img {
 		top: 35%;
 		right: 100px;
 	}
-}
-.classics-subnav__wrapper .icon {
-	display: none;
 }
 .classics-description {
 	position: relative;
@@ -234,6 +292,10 @@ img {
 	width: 100%;
 }
 
-.sticky + .classics-description{
+.sticky + .classics-description {
+	padding-top: 40px;
+}
+
+.sticky + .classics-subnav--mobile__wrapper {
 	padding-top: 40px;
 }

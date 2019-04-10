@@ -959,9 +959,18 @@ function changeText(): void {
 	).textContent = text[textIndex - 1];
 }
 
-// Sticky subnav
+/* Mobile subnav */
+$('#subnav--mobile, .classics-subnav--mobile__wrapper--item').click(() => {
+	$(
+		'.classics-subnav--mobile__wrapper--item, .classics-subnav--mobile__wrapper--shop'
+	).toggle();
+});
+
+/* Sticky subnav */
 const subnav = document.getElementById('subnav');
 const sticky = subnav.offsetTop;
+const mobileSubnav = document.getElementById('subnav--mobile');
+const mobileSticky = mobileSubnav.offsetTop;
 function navbarStick() {
 	if (window.pageYOffset >= 610) {
 		subnav.classList.add('sticky');
@@ -969,6 +978,14 @@ function navbarStick() {
 		subnav.classList.remove('sticky');
 	}
 }
+function navbarStickMobile() {
+	if (window.pageYOffset >= 425) {
+		mobileSubnav.classList.add('sticky');
+	} else {
+		mobileSubnav.classList.remove('sticky');
+	}
+}
 window.onscroll = () => {
 	navbarStick();
+	navbarStickMobile();
 };
