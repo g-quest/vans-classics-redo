@@ -1,9 +1,9 @@
 /**** Initialize Navigo router ****/
 declare var Navigo: any;
-let root = null;
-let useHash = true;
-let hash = '#';
-let router = new Navigo(root, useHash, hash);
+const root = null;
+const useHash = true;
+const hash = '#';
+const router = new Navigo(root, useHash, hash);
 
 /***************************/
 /**** All Classics Page ****/
@@ -160,13 +160,18 @@ router
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha'
 		);
 		if (window.matchMedia('(min-width: 760px)').matches) {
-			$('#img4.classics-body__img').css({
-				gridArea: '2 / 3 / 5 / 5'
-			});
-			$('#img4 .classics-body__img-content').css({
-				justifySelf: 'start',
-				width: '88%'
-			});
+			$('#img4.classics-body__img')
+				.css({
+					gridArea: '2 / 3 / 5 / 5'
+				})
+				.attr('data-parallax', '{"y": "-100"}');
+
+			$('#img4 .classics-body__img-content')
+				.css({
+					justifySelf: 'start',
+					width: '88%'
+				})
+				.addClass('animated fadeInLeft');
 		} else {
 			$('#img4.classics-body__img').css({
 				gridArea: '4 / 1 / 6 / 3'
@@ -184,13 +189,18 @@ router
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-2?wid=1586&fmt=png-alpha'
 		);
 		if (window.matchMedia('(min-width: 760px)').matches) {
-			$('#img5.classics-body__img').css({
-				gridArea: '4 / 1 / 6 / 3'
-			});
-			$('#img5 .classics-body__img-content').css({
-				width: '90%',
-				transform: 'translate(-5%, -15%)'
-			});
+			$('#img5.classics-body__img')
+				.css({
+					gridArea: '4 / 1 / 6 / 3'
+				})
+				.attr('data-parallax', '{"y": "-100"}');
+
+			$('#img5 .classics-body__img-content')
+				.css({
+					width: '90%',
+					transform: 'translate(-5%, -15%)'
+				})
+				.addClass('animated fadeInLeft');
 		} else {
 			$('#img5.classics-body__img').css({
 				gridArea: '6 / 1 / 8 / 3'
@@ -296,9 +306,11 @@ router
 			'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-3?wid=1010&fmt=png-alpha'
 		);
 		if (window.matchMedia('(min-width: 760px)').matches) {
-			$('#img9.classics-body__img').css({
-				gridArea: '1 / 3 / 3 / 5'
-			});
+			$('#img9.classics-body__img')
+				.css({
+					gridArea: '1 / 3 / 3 / 5'
+				})
+				.attr('data-parallax', '{"y": "-100"}');
 			$('#img9 .classics-body__img-content').css({
 				justifySelf: 'end',
 				width: '60%',
@@ -325,9 +337,11 @@ router
 		$('#img10 .classics-body__img-title').text('Authentic');
 		$('#img10 .classics-body__img-price').text('$65.00');
 		if (window.matchMedia('(min-width: 760px)').matches) {
-			$('#img10.classics-body__img').css({
-				gridArea: '2 / 1 / 4 / 2'
-			});
+			$('#img10.classics-body__img')
+				.css({
+					gridArea: '2 / 1 / 4 / 2'
+				})
+				.attr('data-parallax', '{"y": "-100", "x":"-50"}');
 			$('#img10 .classics-body__img-content').css({
 				justifySelf: 'end',
 				width: '75%',
@@ -969,7 +983,7 @@ router
 /* Change text automatically on 'ALL' page */
 let textIndex: number = 0;
 const text = ['Era.', 'Sk8-Hi.', 'Slip-On.', 'Authentic.', 'Old-Skool.'];
-let textIndexLength: number = text.length;
+const textIndexLength: number = text.length;
 function changeText(): void {
 	textIndex++;
 	if (textIndex > textIndexLength) {
@@ -984,7 +998,7 @@ function changeText(): void {
 $('#subnav--mobile, .classics-subnav--mobile__wrapper--item').click(() => {
 	$(
 		'.classics-subnav--mobile__wrapper--item, .classics-subnav--mobile__wrapper--shop'
-	).toggle();
+	).slideToggle(250);
 });
 
 /* Sticky subnav */
@@ -1015,3 +1029,6 @@ if (window.matchMedia('(max-width: 760px)').matches) {
 		navbarStick();
 	};
 }
+
+declare var ParallaxScroll: any;
+ParallaxScroll.init();

@@ -2,7 +2,8 @@
 	"css": {
 		"onsite": [
 			"https://www.vans.com/etc/designs/vfcorp/vans/clientlibs/global/css/global-cms.css?4-26-21214-c55f268c7e72",
-			"//www.vans.com/ns/vans/projects/customs/css/app.css?v06"
+			"//www.vans.com/ns/vans/projects/customs/css/app.css?v06",
+			"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
 		]
 	},
 	"devDependencies": {
@@ -93,7 +94,8 @@
 			"TweenMax": "https://www.vans.com/ns/vans/js/TweenMax",
 			"morphsvg": "https://f7c9cd6ad422c1ae45c2-d8c90e4b1f6c482dcf4945460a0e4e67.ssl.cf2.rackcdn.com/gsap/plugins/MorphSVGPlugin.min",
 			"vansloader": "https://f7c9cd6ad422c1ae45c2-d8c90e4b1f6c482dcf4945460a0e4e67.ssl.cf2.rackcdn.com/vans-loader-jquery",
-			"navigo": "https://njot1.vans.com/fed_test/navigo"
+			"navigo": "https://njot1.vans.com/fed_test/navigo",
+			"ParallaxScroll": "https://www.vans.com/ns/vans/projects/ultrarange/js/jquery.parallax-scroll-rev"
 		},
 		"shim": {
 			"TweenMax": {
@@ -119,6 +121,12 @@
 					"jquery"
 				],
 				"exports": "Navigo"
+			},
+			"ParallaxScroll": {
+				"deps": [
+					"jquery"
+				],
+				"exports": "ParallaxScroll"
 			}
 		}
 	},
