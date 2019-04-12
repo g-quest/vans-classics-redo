@@ -19,37 +19,35 @@ block main
           h1 
             
       .classics-header__imgs
-        .classics-header__img
-          img(id="classics-header__img--1")
-        .classics-header__img
-          img(id="classics-header__img--2" )
-        .classics-header__img
-          img(id="classics-header__img--3")
-       
+        img.classics-header__img--1(id="classics-header__img--1")
+        img.classics-header__img--2(id="classics-header__img--2" )
+        img.classics-header__img--3(id="classics-header__img--3")
+  
+    .classics-subnav--mobile-wrapper#subnav--mobile
+      .classics-subnav--mobile
+        p.classics-subnav--mobile__text MENU
+          img.classics-subnav--mobile__icon(src='https://images.vans.com/is/image/VansBrand/sp19-core-classics-menu-icon?wid=240&fmt=png-alpha')
+      .classics-subnav--mobile__pane
+        ul.classics-subnav--mobile__pane-ul
+          li.classics-subnav--mobile__pane-item
+            a.all-shoes.classics-subnav--mobile__pane-link(href='#') ALL
+          li.classics-subnav--mobile__pane-item
+            a.era-shoes.classics-subnav--mobile__pane-link(href='#era') ERA
+          li.classics-subnav--mobile__pane-item
+            a.classics-subnav--mobile__pane-link(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER
+          li.classics-subnav--mobile__pane-shop
+            a.classics-subnav--mobile__pane-link(href='https://www.vans.com/shop/shoes-classics-original-classics') SHOP NOW  
+     
     .classics-subnav#subnav
       .classics-subnav__wrapper
         .classics-subnav--left
-          a(class="classics-subnav__link all-shoes" href="#") All
+          a.all-shoes.classics-subnav__link(href="#") All
           |  / 
-          a(class="classics-subnav__link era-shoes" href="#era") Era
+          a.era-shoes.classics-subnav__link(href="#era") Era
         .classics-subnav--right
-          a(class="classics-subnav__link" href="https://www.vans.com/utility/store-locator.html") FIND A DEALER
-          a(class="classics-subnav__button" href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  
+          a.classics-subnav__link(href="https://www.vans.com/utility/store-locator.html") FIND A DEALER
+          a.classics-subnav__button(href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  
           
-    .classics-subnav--mobile#subnav--mobile
-      p.classics-subnav--mobile--text MENU
-        img.classics-subnav--mobile--icon(src='https://images.vans.com/is/image/VansBrand/sp19-core-classics-menu-icon?wid=240&fmt=png-alpha')
-    .classics-subnav--mobile__wrapper
-      ul.classics-subnav--mobile__wrapper--ul
-        li.classics-subnav--mobile__wrapper--item
-          a.all-shoes.classics-subnav--mobile__wrapper--link(href='#') ALL
-        li.classics-subnav--mobile__wrapper--item
-          a.era-shoes.classics-subnav--mobile__wrapper--link(href='#era') ERA
-        li.classics-subnav--mobile__wrapper--item
-          a.classics-subnav--mobile__wrapper--link(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER
-        li.classics-subnav--mobile__wrapper--shop
-          a.classics-subnav--mobile__wrapper--link(href='https://www.vans.com/shop/shoes-classics-original-classics') SHOP NOW
-
     .classics-description
       
     .classics-body
@@ -58,7 +56,7 @@ block main
       +imageBlock('img3')
       +imageBlock-noText('img4')
       +imageBlock-noText('img5')
-      +imageBlock('img6')
+      +imageBlockCutOut('img6')
                    
             
     .classics-body
@@ -68,7 +66,7 @@ block main
       +imageBlock('img10')
       +imageBlock('img11')
       +imageBlock('img12')      
-      +imageBlock('img13')
+      +imageBlockCutOut('img13')
       +imageBlock('img14')
       +imageBlock-noText('img15')
                         

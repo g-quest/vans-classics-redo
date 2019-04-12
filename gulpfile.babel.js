@@ -56,7 +56,7 @@ let src = {};
 src.pug = ['./' + dirs.src + '/pug/*.pug'];
 src.pugAll = ['./' + dirs.src + '/pug/**/*.pug'];
 
-src.ts = ['./' + dirs.src + '/ts/app.ts', './' + dirs.src + '/ts/assets/*.ts'];
+src.ts = ['./' + dirs.src + '/ts/assets/*.ts', './' + dirs.src + '/ts/app.ts'];
 
 src.sassWatch = ['./' + dirs.src + '/scss/**/*'];
 src.sassLOCAL = ['./' + dirs.src + '/scss/app.scss'];

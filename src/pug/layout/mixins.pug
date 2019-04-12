@@ -2,16 +2,26 @@
 include vars
 
 mixin imageBlock(blockID) 
-  .classics-body__img(id=blockID)
-    .classics-body__img-content
-      img.classics-body__img-image
-      p.classics-body__img-title
-      p.classics-body__img-price
+  .classics-body__block(id=blockID)
+    .classics-body__block--content
+      .classics-body__block--image-wrapper
+        img.classics-body__block--image
+      p.classics-body__block--title
+      p.classics-body__block--price
+
+mixin imageBlockCutOut(blockID) 
+  .classics-body__block(id=blockID)
+    .classics-body__block--content
+      img.classics-body__block--image-cut-bg(src="https://images.vans.com/is/image/VansBrand/sp19-core-classics-paper-3?wid=764")
+      img.classics-body__block--image-cut
+      p.classics-body__block--title
+      p.classics-body__block--price
 
 mixin imageBlock-noText(blockID) 
-  .classics-body__img(id=blockID)
-    .classics-body__img-content
-      img.classics-body__img-image     
+  .classics-body__block(id=blockID)
+    .classics-body__block--content
+      .classics-body__block--image-wrapper
+        img.classics-body__block--image-solo
 
 //- DO NOT REMOVE
 mixin VansHeader
