@@ -18,10 +18,17 @@ block main
         .classics-header__title-text--bottom-shoe
           h1 
             
-      .classics-header__imgs
-        img.classics-header__img--1(id="classics-header__img--1")
-        img.classics-header__img--2(id="classics-header__img--2" )
-        img.classics-header__img--3(id="classics-header__img--3")
+      #all-header      
+        .classics-header__imgs
+          img.classics-header__img--1(id="all-header__img--1")
+          img.classics-header__img--2(id="all-header__img--2" )
+          img.classics-header__img--3(id="all-header__img--3")
+        
+      #era-header  
+        .classics-header__imgs
+          img.classics-header__img--1(id="era-header__img--1")
+          img.classics-header__img--2(id="era-header__img--2" )
+          img.classics-header__img--3(id="era-header__img--3")
   
     .classics-subnav--mobile-wrapper#subnav--mobile
       .classics-subnav--mobile
@@ -29,8 +36,8 @@ block main
           img.classics-subnav--mobile__icon(src='https://images.vans.com/is/image/VansBrand/sp19-core-classics-menu-icon?wid=240&fmt=png-alpha')
       .classics-subnav--mobile__pane
         ul.classics-subnav--mobile__pane-ul
-          li.classics-subnav--mobile__pane-item
-            a.all-shoes.classics-subnav--mobile__pane-link(href='#') ALL
+          li.classics-subnav--mobile__pane-item 
+            a.all-shoes.classics-subnav--mobile__pane-link(href='#') CLASSICS
           li.classics-subnav--mobile__pane-item
             a.era-shoes.classics-subnav--mobile__pane-link(href='#era') ERA
           li.classics-subnav--mobile__pane-item
@@ -41,7 +48,7 @@ block main
     .classics-subnav#subnav
       .classics-subnav__wrapper
         .classics-subnav--left
-          a.all-shoes.classics-subnav__link(href="#") All
+          a.all-shoes.classics-subnav__link(href="#") Classics
           |  / 
           a.era-shoes.classics-subnav__link(href="#era") Era
         .classics-subnav--right
@@ -49,26 +56,49 @@ block main
           a.classics-subnav__button(href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  
           
     .classics-description
-      
-    .classics-body
-      +imageBlock('img1')
-      +imageBlock('img2')
-      +imageBlock('img3')
-      +imageBlock-noText('img4')
-      +imageBlock-noText('img5')
-      +imageBlockCutOut('img6')
+  
+    #all-body    
+      .classics-body
+        +imageBlock('all-img1')
+        +imageBlock('all-img2')
+        +imageBlock('all-img3')
+        +imageBlock-noText('all-img4')
+        +imageBlock-noText('all-img5')
+        +imageBlockCutOut('all-img6')
                    
             
-    .classics-body
-      +imageBlock('img7')
-      +imageBlock('img8')
-      +imageBlock-noText('img9')
-      +imageBlock('img10')
-      +imageBlock('img11')
-      +imageBlock('img12')      
-      +imageBlockCutOut('img13')
-      +imageBlock('img14')
-      +imageBlock-noText('img15')
+      .classics-body
+        +imageBlock('all-img7')
+        +imageBlock('all-img8')
+        +imageBlock-noText('all-img9')
+        +imageBlock('all-img10')
+        +imageBlock('all-img11')
+        +imageBlock('all-img12')      
+        +imageBlockCutOut('all-img13')
+        +imageBlock('all-img14')
+        +imageBlock-noText('all-img15')
+      
+    #era-body      
+      .classics-body
+        +imageBlock('era-img1')
+        +imageBlock('era-img2')
+        +imageBlock('era-img3')
+        +imageBlock-noText('era-img4')
+        +imageBlock-noText('era-img5')
+        +imageBlockCutOut('era-img6')
+                   
+            
+      .classics-body
+        +imageBlock('era-img7')
+        +imageBlock('era-img8')
+        +imageBlock-noText('era-img9')
+        +imageBlock('era-img10')
+        +imageBlock('era-img11')
+        +imageBlock('era-img12')      
+        +imageBlockCutOut('era-img13')
+        +imageBlock('era-img14')
+        +imageBlock-noText('era-img15')      
+         
                         
     .classics-subfooter
       a(href="https://www.vans.com/shop/shoes-classics-original-classics")
