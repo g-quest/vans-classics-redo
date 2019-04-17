@@ -5,6 +5,7 @@
 		"no-any": false,
 		"no-unused-expression": true,
 		"object-literal-sort-keys": false,
+		"forin": false,
 		"ordered-imports": false,
 		"no-console": false,
 		"prefer-conditional-expression": false,

@@ -20,15 +20,17 @@ block main
             
       #all-header      
         .classics-header__imgs
-          img.classics-header__img--1(id="all-header__img--1")
-          img.classics-header__img--2(id="all-header__img--2" )
-          img.classics-header__img--3(id="all-header__img--3")
+          img.classics-header__img--mobile.animated(id="all-header__img--mobile")          
+          img.classics-header__img--1.animated(id="all-header__img--1")
+          img.classics-header__img--2.animated(id="all-header__img--2" )
+          img.classics-header__img--3.animated(id="all-header__img--3")
         
       #era-header  
         .classics-header__imgs
-          img.classics-header__img--1(id="era-header__img--1")
-          img.classics-header__img--2(id="era-header__img--2" )
-          img.classics-header__img--3(id="era-header__img--3")
+          img.classics-header__img--mobile.animated(id="era-header__img--mobile")  
+          img.classics-header__img--1.animated(id="era-header__img--1")
+          img.classics-header__img--2.animated(id="era-header__img--2" )
+          img.classics-header__img--3.animated(id="era-header__img--3")
   
     .classics-subnav--mobile-wrapper#subnav--mobile
       .classics-subnav--mobile
@@ -37,9 +39,9 @@ block main
       .classics-subnav--mobile__pane
         ul.classics-subnav--mobile__pane-ul
           li.classics-subnav--mobile__pane-item 
-            a.all-shoes.classics-subnav--mobile__pane-link(href='#') CLASSICS
+            a.all-link.classics-subnav--mobile__pane-link(href='#') CLASSICS
           li.classics-subnav--mobile__pane-item
-            a.era-shoes.classics-subnav--mobile__pane-link(href='#era') ERA
+            a.era-link.classics-subnav--mobile__pane-link(href='#era') ERA
           li.classics-subnav--mobile__pane-item
             a.classics-subnav--mobile__pane-link(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER
           li.classics-subnav--mobile__pane-shop
@@ -48,9 +50,9 @@ block main
     .classics-subnav#subnav
       .classics-subnav__wrapper
         .classics-subnav--left
-          a.all-shoes.classics-subnav__link(href="#") Classics
+          a.all-link.classics-subnav__link(href="#") Classics
           |  / 
-          a.era-shoes.classics-subnav__link(href="#era") Era
+          a.era-link.classics-subnav__link(href="#era") Era
         .classics-subnav--right
           a.classics-subnav__link(href="https://www.vans.com/utility/store-locator.html") FIND A DEALER
           a.classics-subnav__button(href="https://www.vans.com/shop/shoes-classics-original-classics") SHOP NOW  

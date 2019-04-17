@@ -1,9 +1,27 @@
+/***********************************/
+/**** Header Images and Styling ****/
+/***********************************/
+
+/* Do not touch unless design changes are required */
+
 class HeaderImages {
 	public static all = {
-		first: {
-			imgUrl:
+		mobileImg: {
+			url:
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-all-header-mobile?wid=800',
+			style: {
+				position: 'absolute',
+				zIndex: '3',
+				bottom: '-350px',
+				left: '0',
+				width: '100%'
+			},
+			animation: 'zoomIn'
+		},
+		img1: {
+			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-all-header-1?wid=836',
-			desktop: {
+			style: {
 				position: 'absolute',
 				zIndex: '1',
 				bottom: '-650px',
@@ -11,18 +29,12 @@ class HeaderImages {
 				width: '30%',
 				minWidth: '400px'
 			},
-			mobile: {
-				position: 'absolute',
-				top: '0',
-				zIndex: '5',
-				right: '50%',
-				width: '53%'
-			}
+			animation: 'fadeInLeft'
 		},
-		second: {
-			imgUrl:
+		img2: {
+			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-all-header-2?wid=1824&fmt=png-alpha',
-			desktop: {
+			style: {
 				position: 'absolute',
 				zIndex: '0',
 				top: '-60px',
@@ -30,18 +42,12 @@ class HeaderImages {
 				width: '65%',
 				minWidth: '966px'
 			},
-			mobile: {
-				position: 'absolute',
-				zIndex: '1',
-				bottom: '-300px',
-				left: '30%',
-				transform: 'scale(1.6)'
-			}
+			animation: 'zoomIn'
 		},
-		third: {
-			imgUrl:
+		img3: {
+			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-all-header-3?wid=1030&fmt=png-alpha',
-			desktop: {
+			style: {
 				position: 'absolute',
 				zIndex: '1',
 				bottom: '-520px',
@@ -49,16 +55,26 @@ class HeaderImages {
 				width: '25%',
 				minWidth: '400px'
 			},
-			mobile: {
-				display: 'none'
-			}
+			animation: 'fadeInRight'
 		}
 	};
 	public static era = {
-		first: {
-			imgUrl:
+		mobileImg: {
+			url:
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-header-mobile?wid=800',
+			style: {
+				position: 'absolute',
+				zIndex: '3',
+				bottom: '-350px',
+				left: '0',
+				width: '100%'
+			},
+			animation: 'zoomIn'
+		},
+		img1: {
+			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-header-1?wid=946&fmt=png-alpha',
-			desktop: {
+			style: {
 				position: 'absolute',
 				zIndex: '3',
 				bottom: '-550px',
@@ -66,19 +82,12 @@ class HeaderImages {
 				width: '25%',
 				minWidth: '400px'
 			},
-			mobile: {
-				position: 'absolute',
-				top: 'auto',
-				bottom: '-375px',
-				zIndex: '5',
-				right: '0',
-				transform: 'scale(1.2)'
-			}
+			animation: 'fadeInLeft'
 		},
-		second: {
+		img2: {
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-header-2?wid=2814',
-			desktop: {
+			style: {
 				position: 'absolute',
 				zIndex: '2',
 				bottom: '-500px',
@@ -86,9 +95,7 @@ class HeaderImages {
 				width: '90%',
 				minWidth: '1270px'
 			},
-			mobile: {
-				display: 'none'
-			}
+			animation: 'fadeInRight'
 		}
 	};
 }
