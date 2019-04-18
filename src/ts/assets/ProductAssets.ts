@@ -81,41 +81,29 @@ class ProductAssets {
 		},
 		4: {
 			url:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-6?wid=561&fmt=png-alpha',
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-7?wid=1072&fmt=png-alpha',
 			type: 'Era',
 			price: '$65.00'
 		},
 		5: {
 			url:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-7?wid=1072&fmt=png-alpha',
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-8?wid=583&fmt=png-alpha',
 			type: 'Era',
 			price: '$65.00'
 		},
 		6: {
 			url:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-8?wid=583&fmt=png-alpha',
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-3?wid=1072&fmt=png-alpha',
 			type: 'Era',
 			price: '$65.00'
 		},
 		7: {
 			url:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-3?wid=1072&fmt=png-alpha',
-			type: 'Era',
-			price: '$65.00'
-		},
-		8: {
-			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-2?wid=1072&fmt=png-alpha',
 			type: 'Era',
 			price: '$65.00'
 		},
-		9: {
-			url:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-9?wid=548&fmt=png-alpha',
-			type: 'Era',
-			price: '$65.00'
-		},
-		10: {
+		8: {
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-10?wid=1072&fmt=png-alpha',
 			type: 'Era',

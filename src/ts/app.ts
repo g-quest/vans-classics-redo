@@ -209,22 +209,22 @@ router
 		// 	});
 		// }
 
-		if (window.matchMedia('(min-width: 760px)').matches) {
-			for (i = 1; i < 12; i++) {
-				productImages.push(document.getElementById(`all-img${i}`));
-				productUrls.push(ProductAssets.all[`${i}`].url);
-				productTypes.push(ProductAssets.all[`${i}`].type);
-				productPrices.push(ProductAssets.all[`${i}`].price);
-				productGrids.push(ProductStyles.all[`img${i}`].style);
-				productStyles.push(ProductStyles.all[`img${i}`].animation);
-			}
-
-			for (i = 0; i < headerImages.length; i++) {
-				headerImages[i].setAttribute('src', headerUrls[i]);
-				Object.assign(headerImages[i].style, headerImagesStyles[i]);
-				headerImages[i].classList.add(headerImagesAnimations[i]);
-			}
-		}
+		// if (window.matchMedia('(min-width: 760px)').matches) {
+		// 	for (i = 1; i < 12; i++) {
+		// 		productImages.push(document.getElementById(`all-img${i}`));
+		// 		productUrls.push(ProductAssets.all[`${i}`].url);
+		// 		productTypes.push(ProductAssets.all[`${i}`].type);
+		// 		productPrices.push(ProductAssets.all[`${i}`].price);
+		// 		productGrids.push(ProductStyles.all[`img${i}`].style);
+		// 		productStyles.push(ProductStyles.all[`img${i}`].animation);
+		// 	}
+		//
+		// 	for (i = 0; i < headerImages.length; i++) {
+		// 		headerImages[i].setAttribute('src', headerUrls[i]);
+		// 		Object.assign(headerImages[i].style, headerImagesStyles[i]);
+		// 		headerImages[i].classList.add(headerImagesAnimations[i]);
+		// 	}
+		// }
 
 		// first image
 		$('#all-img1 .classics-body__block--image').attr(
