@@ -47,7 +47,7 @@ img {
 	@media #{$md-mobile} {
 		height: 350px;
 	}
-	&__title {
+	&__text {
 		position: relative;
 		height: 100%;
 		max-width: 1440px;
@@ -83,7 +83,7 @@ img {
 			}
 		}
 
-		&-text--top {
+		&-top {
 			position: absolute;
 			z-index: 10;
 			top: 20%;
@@ -96,7 +96,7 @@ img {
 				font-size: 1.4em;
 			}
 		}
-		&-text--middle {
+		&-middle {
 			position: absolute;
 			z-index: 10;
 			top: 35%;
@@ -109,8 +109,8 @@ img {
 				font-size: 1.4em;
 			}
 		}
-		&-text--bottom,
-		&-text--bottom-shoe {
+		&-bottom--auto,
+		&-bottom--static {
 			position: absolute;
 			z-index: 10;
 			top: 50%;
@@ -165,7 +165,7 @@ img {
 			margin-left: 0;
 		}
 		&-item,
-		&-shop {
+		&-button {
 			list-style: none;
 			text-align: center;
 			margin: 5px auto;
@@ -179,7 +179,7 @@ img {
 				color: white;
 			}
 		}
-		&-shop {
+		&-button {
 			background-color: $vans-red;
 			height: 40px;
 			padding-top: 8px;
@@ -259,13 +259,11 @@ img {
 	}
 	&__block {
 		display: grid;
-		&--content {
+		&-content {
 			text-align: center;
 		}
-		&--image-wrapper {
-			// overflow: hidden;
-		}
-		&--image {
+		&-image {
+			margin-bottom: 10px;
 			width: 100%;
 			transition: 0.2s ease-in-out;
 			&:hover {
@@ -275,13 +273,14 @@ img {
 				}
 			}
 		}
-		&--image-cut {
+		&-background {
+			position: absolute;
+			z-index: -1;
+		}
+		&-silhouette {
+			margin-bottom: 10px;
 			width: 100%;
 			transition: 0.2s ease-in-out;
-			&-bg {
-				position: absolute;
-				z-index: -1;
-			}
 			&:hover {
 				@media #{$md-desktop} {
 					transform: scale(1.1) translateY(-5%);
@@ -289,14 +288,18 @@ img {
 				}
 			}
 		}
-		&--image-solo {
+		&-lifestyle {
 			width: 100%;
 		}
-		&--title {
-			margin-top: 10px;
-			margin-bottom: 0px;
+		&-title {
+			&:hover {
+				@media #{$md-desktop} {
+					color: black;
+				}
+			}
 		}
-		&--price {
+		&-price {
+			margin-top: 10px;
 			font-size: $small-size;
 			color: $vans-red;
 		}

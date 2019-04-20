@@ -32,7 +32,8 @@ class CutoutImages {
 				style: {
 					width: '100%',
 					padding: '0 20px',
-					margin: '0'
+					margin: '0',
+					transform: 'translate(0, -10%)'
 				},
 				imgStyle: {
 					transform: 'scale(.8) translate(0, 10%)'
@@ -56,7 +57,7 @@ class CutoutImages {
 					width: '90%',
 					transform: 'translate(25%, 40%)'
 				},
-				gridArea: '4 / 1 / 5 / 2',
+				gridArea: '11 / 1 / 12 / 2',
 				imgStyle: {
 					transform: 'scale(1.2) translate(0, .5%)',
 					zIndex: '1'
@@ -67,7 +68,7 @@ class CutoutImages {
 				}
 			},
 			mobile: {
-				gridArea: '8 / 1 / 10 / 3',
+				gridArea: '18 / 1 / 20 / 3',
 				style: {
 					justifySelf: 'center',
 					width: '70%',
@@ -97,7 +98,7 @@ class CutoutImages {
 					justifySelf: 'start',
 					margin: '10% auto auto 15%',
 					width: '60%',
-					transform: 'translate(0, 55%)'
+					transform: 'translate(0, 65%)'
 				},
 				gridArea: '3 / 3 / 4 / 5',
 				imgStyle: {},
@@ -133,16 +134,16 @@ class CutoutImages {
 				style: {
 					justifySelf: 'start',
 					width: '65%',
-					transform: 'translate(15%, 70%)'
+					transform: 'translate(15%, 35%)'
 				},
-				gridArea: '4 / 1 / 5 / 3',
+				gridArea: '8 / 1 / 9 / 3',
 				imgStyle: {},
 				backgroundStyle: {
 					transform: 'scale(0.35) translate(-105%, -115%)'
 				}
 			},
 			mobile: {
-				gridArea: '12 / 1 / 14 / 3',
+				gridArea: '18 / 1 / 19 / 3',
 				style: {
 					justifySelf: 'center',
 					width: '100%',

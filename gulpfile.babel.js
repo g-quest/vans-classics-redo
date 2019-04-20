@@ -226,7 +226,8 @@ gulp.task('jsDist', function(done) {
 		.pipe(tslint({ formatter: 'stylish', console: true }))
 		.pipe(
 			tslint.report({
-				summarizeFailureOutput: true
+				summarizeFailureOutput: true,
+				allowWarnings: true
 			})
 		)
 		.pipe(concat('concat.ts'))

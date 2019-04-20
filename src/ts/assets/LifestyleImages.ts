@@ -49,7 +49,7 @@ class LifestyleImages {
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-3?wid=1010&fmt=png-alpha',
 			desktop: {
-				gridArea: '1 / 3 / 3 / 5',
+				gridArea: '6 / 3 / 9 / 5',
 				style: {
 					justifySelf: 'end',
 					width: '60%',
@@ -57,7 +57,7 @@ class LifestyleImages {
 				}
 			},
 			mobile: {
-				gridArea: '2 / 1 / 4 / 3',
+				gridArea: '12 / 1 / 14 / 3',
 				style: {
 					width: '100%',
 					padding: '0 15px',
@@ -69,7 +69,7 @@ class LifestyleImages {
 			url:
 				'http://0bcaec7ece69371763f5-b1bcbcfde69c8ed350e6ba506c5f8d5c.r72.cf1.rackcdn.com/s19-core-classics-era-4.gif',
 			desktop: {
-				gridArea: '4 / 3 / 5 / 5',
+				gridArea: '11 / 3 / 13 / 5',
 				style: {
 					justifySelf: 'end',
 					width: '65%',
@@ -77,7 +77,7 @@ class LifestyleImages {
 				}
 			},
 			mobile: {
-				gridArea: '6 / 1 / 8 / 3',
+				gridArea: '16 / 1 / 18 / 3',
 				style: {
 					width: '100%',
 					padding: '0 10px',
@@ -130,7 +130,7 @@ class LifestyleImages {
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha',
 			desktop: {
-				gridArea: '1 / 2 / 3 / 4',
+				gridArea: '4 / 2 / 6 / 4',
 				style: {
 					justifySelf: 'start',
 					width: '90%',
@@ -138,7 +138,7 @@ class LifestyleImages {
 				}
 			},
 			mobile: {
-				gridArea: '2 / 1 / 4 / 3',
+				gridArea: '11 / 1 / 13 / 3',
 				style: {
 					width: '100%',
 					padding: '0 10px',
@@ -150,7 +150,7 @@ class LifestyleImages {
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-7?wid=549&fmt=png-alpha',
 			desktop: {
-				gridArea: '3 / 1 / 4 / 2',
+				gridArea: '6 / 1 / 7 / 2',
 				style: {
 					justifySelf: 'end',
 					width: '130%',
@@ -158,7 +158,7 @@ class LifestyleImages {
 				}
 			},
 			mobile: {
-				gridArea: '6 / 1 / 8 / 3',
+				gridArea: '12 / 1 / 13 / 3',
 				style: {
 					width: '100%',
 					padding: '0 5px',
@@ -170,7 +170,7 @@ class LifestyleImages {
 			url:
 				'http://0bcaec7ece69371763f5-b1bcbcfde69c8ed350e6ba506c5f8d5c.r72.cf1.rackcdn.com/s19-core-classics-era-4.gif',
 			desktop: {
-				gridArea: '4 / 3 / 5 / 5',
+				gridArea: '8 / 3 / 10 / 5',
 				style: {
 					justifySelf: 'end',
 					width: '65%',
@@ -178,11 +178,11 @@ class LifestyleImages {
 				}
 			},
 			mobile: {
-				gridArea: '10 / 1 / 12 / 3',
+				gridArea: '16 / 1 / 18 / 3',
 				style: {
 					width: '100%',
 					padding: '0 10px',
-					marginBottom: '10px '
+					marginBottom: '10px'
 				}
 			}
 		}
