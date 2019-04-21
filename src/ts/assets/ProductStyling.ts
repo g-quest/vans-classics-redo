@@ -6,7 +6,7 @@
 
 class ProductStyles {
 	public static all = {
-		1: {
+		0: {
 			desktop: {
 				gridArea: '1 / 1 / 3 / 3',
 				style: {
@@ -24,7 +24,7 @@ class ProductStyles {
 				}
 			}
 		},
-		2: {
+		1: {
 			desktop: {
 				gridArea: '1 / 3 / 2 / 4',
 				style: {
@@ -41,7 +41,7 @@ class ProductStyles {
 				}
 			}
 		},
-		3: {
+		2: {
 			desktop: {
 				gridArea: '1 / 4 / 2 / 5',
 				style: {
@@ -58,7 +58,7 @@ class ProductStyles {
 				}
 			}
 		},
-		4: {
+		3: {
 			desktop: {
 				gridArea: '6 / 2 / 8 / 3',
 				style: {
@@ -75,7 +75,7 @@ class ProductStyles {
 				}
 			}
 		},
-		5: {
+		4: {
 			desktop: {
 				gridArea: '6 / 3 / 8 / 4',
 				style: {
@@ -92,7 +92,7 @@ class ProductStyles {
 				}
 			}
 		},
-		6: {
+		5: {
 			desktop: {
 				gridArea: '8 / 1 / 10 / 2',
 				style: {
@@ -110,7 +110,7 @@ class ProductStyles {
 				}
 			}
 		},
-		7: {
+		6: {
 			desktop: {
 				gridArea: '8 / 2 / 11 / 4',
 				style: {
@@ -127,7 +127,7 @@ class ProductStyles {
 				}
 			}
 		},
-		8: {
+		7: {
 			desktop: {
 				gridArea: '9 / 4 / 11 / 5',
 				style: {
@@ -144,7 +144,7 @@ class ProductStyles {
 				}
 			}
 		},
-		9: {
+		8: {
 			desktop: {
 				gridArea: '11 / 3 / 12 / 4',
 				style: {
@@ -163,7 +163,7 @@ class ProductStyles {
 		}
 	};
 	public static era = {
-		1: {
+		0: {
 			desktop: {
 				gridArea: '1 / 1 / 3 / 3',
 				style: {
@@ -181,7 +181,7 @@ class ProductStyles {
 				}
 			}
 		},
-		2: {
+		1: {
 			desktop: {
 				gridArea: '3 / 3 / 4 / 4',
 				style: {
@@ -196,7 +196,7 @@ class ProductStyles {
 				padding: '0 10px'
 			}
 		},
-		3: {
+		2: {
 			desktop: {
 				gridArea: '3 / 4 / 4 / 5',
 				style: {
@@ -213,7 +213,7 @@ class ProductStyles {
 				}
 			}
 		},
-		4: {
+		3: {
 			desktop: {
 				gridArea: '4 / 1 / 5 / 2',
 				style: {
@@ -230,7 +230,7 @@ class ProductStyles {
 				}
 			}
 		},
-		5: {
+		4: {
 			desktop: {
 				gridArea: '4 / 4 / 5 / 5',
 				style: {
@@ -247,7 +247,7 @@ class ProductStyles {
 				}
 			}
 		},
-		6: {
+		5: {
 			desktop: {
 				gridArea: '6 / 2 / 8 / 4',
 				style: {
@@ -265,7 +265,7 @@ class ProductStyles {
 				}
 			}
 		},
-		7: {
+		6: {
 			desktop: {
 				gridArea: '6 / 4 / 7 / 5',
 				style: {
@@ -282,7 +282,7 @@ class ProductStyles {
 				}
 			}
 		},
-		8: {
+		7: {
 			desktop: {
 				gridArea: '8 / 3 / 9 / 4',
 				style: {

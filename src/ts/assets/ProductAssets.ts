@@ -2,7 +2,7 @@
 /**** Product Assets ****/
 /************************/
 
-/* Additional products can be added as these will be randomized when shown */
+/* Additional products may be added as these will be randomized when shown */
 
 class ProductAssets {
 	public static all = [
@@ -93,8 +93,8 @@ class ProductAssets {
 			alt: 'HERO'
 		}
 	];
-	public static era = {
-		1: {
+	public static era = [
+		{
 			url:
 				'https://www.vans.com/shop/checkerboard-era-strawberry-pink-true-white#hero=0',
 			type: 'Era',
@@ -102,49 +102,49 @@ class ProductAssets {
 			vn: '8FRVOX',
 			alt: 'HERO'
 		},
-		2: {
+		{
 			url: 'https://www.vans.com/shop/anaheim-factory-era-95-dx-og-navy-og-red',
 			type: 'Era',
 			price: '$75.00',
 			vn: 'RR1VPK',
 			alt: 'HERO'
 		},
-		3: {
+		{
 			url: 'https://www.vans.com/shop/tie-dye-era-garden-green-true-white',
 			type: 'Era',
 			price: '$60.00',
 			vn: '8FRVIL',
 			alt: 'HERO'
 		},
-		4: {
+		{
 			url: 'https://www.vans.com/shop/tie-dye-era-tango-red-true-white',
 			type: 'Era',
 			price: '$60.00',
 			vn: '8FRVPB',
 			alt: 'HERO'
 		},
-		5: {
+		{
 			url: 'https://www.vans.com/shop/era-black',
 			type: 'Era',
 			price: '$50.00',
 			vn: 'EWZBLK',
 			alt: 'HERO'
 		},
-		6: {
+		{
 			url: 'https://www.vans.com/shop/mlx-era-true-white-true-white',
 			type: 'Era',
 			price: '$50.00',
 			vn: 'VHQAOB',
 			alt: 'HERO'
 		},
-		7: {
+		{
 			url: 'https://www.vans.com/shop/check-foxing-era-black-true-white',
 			type: 'Era',
 			price: '$50.00',
 			vn: '8FRVOS',
 			alt: 'HERO'
 		},
-		8: {
+		{
 			url:
 				'https://www.vans.com/shop/tri-block-era-platform-tango-red-blazing-yellow-quetzal-green',
 			type: 'Era',
@@ -152,5 +152,5 @@ class ProductAssets {
 			vn: 'WLUVPY',
 			alt: 'HERO'
 		}
-	};
+	];
 }
