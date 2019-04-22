@@ -5,12 +5,13 @@
 /* Do not touch unless design changes are required */
 
 class LifestyleImages {
-	public static all = {
-		one: {
+	public static all = [
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha',
 			desktop: {
 				gridArea: '2 / 3 / 5 / 5',
+				ease: '{"y": "50"}',
 				style: {
 					justifySelf: 'start',
 					width: '88%'
@@ -25,11 +26,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		two: {
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-2?wid=1586&fmt=png-alpha',
 			desktop: {
 				gridArea: '4 / 1 / 6 / 3',
+				ease: '{"y": "-50"}',
 				style: {
 					margin: '0',
 					width: '90%',
@@ -45,11 +47,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		three: {
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-3?wid=1010&fmt=png-alpha',
 			desktop: {
 				gridArea: '6 / 3 / 9 / 5',
+				ease: '{"y": "50"}',
 				style: {
 					justifySelf: 'end',
 					width: '60%',
@@ -65,11 +68,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		four: {
+		{
 			url:
 				'http://0bcaec7ece69371763f5-b1bcbcfde69c8ed350e6ba506c5f8d5c.r72.cf1.rackcdn.com/s19-core-classics-era-4.gif',
 			desktop: {
 				gridArea: '11 / 3 / 13 / 5',
+				ease: '{"y": "-100"}',
 				style: {
 					justifySelf: 'end',
 					width: '65%',
@@ -85,13 +89,14 @@ class LifestyleImages {
 				}
 			}
 		}
-	};
-	public static era = {
-		one: {
+	];
+	public static era = [
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-5?wid=1504&fmt=png-alpha',
 			desktop: {
 				gridArea: '1 / 3 / 3 / 5',
+				ease: '{"y": "50"}',
 				style: {
 					justifySelf: 'end',
 					width: '85%'
@@ -106,11 +111,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		two: {
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-6?wid=455&fmt=png-alpha',
 			desktop: {
 				gridArea: '3 / 1 / 4 / 3',
+				ease: '{"y": "-50"}',
 				style: {
 					margin: '0 auto',
 					width: '50%',
@@ -126,11 +132,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		three: {
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha',
 			desktop: {
 				gridArea: '4 / 2 / 6 / 4',
+				ease: '{"y": "50"}',
 				style: {
 					justifySelf: 'start',
 					width: '90%',
@@ -146,11 +153,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		four: {
+		{
 			url:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-7?wid=549&fmt=png-alpha',
 			desktop: {
 				gridArea: '6 / 1 / 7 / 2',
+				ease: '{"y": "-50"}',
 				style: {
 					justifySelf: 'end',
 					width: '130%',
@@ -166,11 +174,12 @@ class LifestyleImages {
 				}
 			}
 		},
-		five: {
+		{
 			url:
 				'http://0bcaec7ece69371763f5-b1bcbcfde69c8ed350e6ba506c5f8d5c.r72.cf1.rackcdn.com/s19-core-classics-era-4.gif',
 			desktop: {
 				gridArea: '8 / 3 / 10 / 5',
+				ease: '{"y": "-100"}',
 				style: {
 					justifySelf: 'end',
 					width: '65%',
@@ -186,5 +195,5 @@ class LifestyleImages {
 				}
 			}
 		}
-	};
+	];
 }

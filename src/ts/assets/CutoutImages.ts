@@ -1,12 +1,12 @@
 /***************************************/
-/**** Silhouette Images and Styling ****/
+/**** Cutout Images and Styling ****/
 /***************************************/
 
 /* Do not touch unless design changes are required */
 
 class CutoutImages {
-	public static all = {
-		one: {
+	public static all = [
+		{
 			type: 'Sk8-Hi',
 			price: '$65.00',
 			url:
@@ -44,7 +44,7 @@ class CutoutImages {
 				}
 			}
 		},
-		two: {
+		{
 			type: 'Slip-On',
 			price: '$65.00',
 			url:
@@ -84,9 +84,9 @@ class CutoutImages {
 				}
 			}
 		}
-	};
-	public static era = {
-		one: {
+	];
+	public static era = [
+		{
 			type: 'Era',
 			price: '$65.00',
 			url:
@@ -123,7 +123,7 @@ class CutoutImages {
 				}
 			}
 		},
-		two: {
+		{
 			type: 'Era',
 			price: '$65.00',
 			url:
@@ -159,5 +159,5 @@ class CutoutImages {
 				}
 			}
 		}
-	};
+	];
 }

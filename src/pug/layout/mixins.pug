@@ -1,6 +1,4 @@
 //- ADD YOUR MIXINS HERE
-include vars
-
 mixin subnavLink(type, route, name)
   a.classics-subnav__link(class=type href=route) #{name}
 
@@ -16,12 +14,12 @@ mixin productBlock(blockID)
       a.classics-body__block-title
       .classics-body__block-price
 
-mixin silhouetteBlock(blockID) 
+mixin cutoutBlock(blockID) 
   .classics-body__block(id=blockID)
     .classics-body__block-content
       img.classics-body__block-background
       a
-        img.classics-body__block-silhouette
+        img.classics-body__block-cutout
       a.classics-body__block-title
       .classics-body__block-price
 

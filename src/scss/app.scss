@@ -265,9 +265,11 @@ img {
 		&-image {
 			margin-bottom: 10px;
 			width: 100%;
+			-webkit-transition: 0.2s ease-in-out;
 			transition: 0.2s ease-in-out;
 			&:hover {
 				@media #{$md-desktop} {
+					-webkit-transform: scale(1.03);
 					transform: scale(1.03);
 					cursor: pointer;
 				}
@@ -277,12 +279,14 @@ img {
 			position: absolute;
 			z-index: -1;
 		}
-		&-silhouette {
+		&-cutout {
 			margin-bottom: 10px;
 			width: 100%;
+			-webkit-transition: 0.2s ease-in-out;
 			transition: 0.2s ease-in-out;
 			&:hover {
 				@media #{$md-desktop} {
+					-webkit-transform: scale(1.1) translateY(-5%);
 					transform: scale(1.1) translateY(-5%);
 					cursor: pointer;
 				}
