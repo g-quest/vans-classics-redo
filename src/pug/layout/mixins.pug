@@ -1,10 +1,53 @@
-//- ADD YOUR MIXINS HERE
+
+mixin headerText
+  .classics-header__text
+    .classics-header__text-bg1.animated
+      img(src="https://images.vans.com/is/image/VansBrand/sp19-core-classics-header-paper-2?wid=720")
+    .classics-header__text-bg2.animated
+      img(src="https://images.vans.com/is/image/VansBrand/sp19-core-classics-header-paper-1?wid=844")     
+    .classics-header__text-top.animated
+      h1 This
+    .classics-header__text-middle.animated
+      h1 is the
+    .classics-header__text-bottom.animated
+      h1
+        
+mixin headerImage(headerImageID)
+  img.animated(id=headerImageID) 
+    
 mixin subnavLink(type, route, name)
   a.classics-subnav__link(class=type href=route) #{name}
 
 mixin subnavLinkMobile(type, route, name)
   li.classics-subnav--mobile__pane-item 
     a.classics-subnav--mobile__pane-link(class=type href=route) #{name}
+    
+mixin subnavMobile
+  #subnav--mobile
+    .classics-subnav--mobile
+      p.classics-subnav--mobile__text MENU
+        img.classics-subnav--mobile__icon(src='https://images.vans.com/is/image/VansBrand/sp19-core-classics-menu-icon?wid=240&fmt=png-alpha')
+    .classics-subnav--mobile__pane
+      ul.classics-subnav--mobile__pane-ul
+        +subnavLinkMobile('all-link', '#', 'CLASSICS')
+        +subnavLinkMobile('era-link', '#era', 'ERA')
+        
+        li.classics-subnav--mobile__pane-item
+          a.classics-subnav--mobile__pane-link(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER
+        
+        li.classics-subnav--mobile__pane-item.classics-subnav--mobile__pane-button
+          a.classics-subnav--mobile__pane-link(href='https://www.vans.com/shop/shoes-classics-original-classics') SHOP NOW
+
+mixin subnavDesktop
+  #subnav--desktop.classics-subnav
+    .classics-subnav__wrapper
+      .classics-subnav--left
+        +subnavLink('all-link', '#', 'CLASSICS')
+        | /
+        +subnavLink('era-link', '#era', 'ERA')
+      .classics-subnav--right
+        +subnavLink('', 'https://www.vans.com/utility/store-locator.html', 'FIND A DEALER')
+        +subnavLink('classics-subnav__button', 'https://www.vans.com/shop/shoes-classics-original-classics', 'SHOP NOW') 
     
 mixin productBlock(blockID) 
   .classics-body__block(id=blockID)
@@ -27,6 +70,11 @@ mixin lifestyleBlock(blockID)
   .classics-body__block(id=blockID)
     .classics-body__block-content
       img.classics-body__block-lifestyle
+        
+mixin subfooter
+  .classics-subfooter
+    a(href="https://www.vans.com/shop/shoes-classics-original-classics")
+      .button.classics-subfooter__button
 
 //- DO NOT REMOVE
 mixin VansHeader

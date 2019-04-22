@@ -11,12 +11,11 @@ function changeText(): void {
 	if (textIndex > textIndexLength) {
 		textIndex = 1;
 	}
-	document.querySelector('.classics-header__text-bottom--auto h1').textContent =
-		text[textIndex - 1];
+	document.querySelector(
+		'#all-header .classics-header__text .classics-header__text-bottom h1'
+	).textContent = text[textIndex - 1];
 }
-
-/* Start automatic text change for 'ALL' page on load */
-const si = setInterval(changeText, 1000);
+setInterval(changeText, 1000);
 
 /* Mobile subnav */
 $('.classics-subnav--mobile').click(() => {
@@ -50,7 +49,7 @@ if (window.matchMedia('(max-width: 760px)').matches) {
 declare var ParallaxScroll: any;
 ParallaxScroll.init();
 
-/* Mobile fade in when element comes into view */
+/* Initialize WOW.js */
 declare var WOW: any;
 new WOW().init();
 
@@ -74,6 +73,84 @@ function shuffleProducts(productArray) {
 	return productArray;
 }
 
+/* Generate Header */
+function generateHeader(productType: string, imageCount: number) {
+	const mobileHeaderImageUrl = HeaderAssets[`${productType}`].mobile.url;
+	const mobileHeaderImageStyle = HeaderAssets[`${productType}`].mobile.style;
+	const mobileHeaderImageAnimation =
+		HeaderAssets[`${productType}`].mobile.animation;
+	const headerImageUrls = [];
+	const headerImageStyles = [];
+	const headerImageAnimations = [];
+
+	const textBackground1 = document.querySelector(
+		`#${productType}-header .classics-header__text-bg1`
+	);
+	const textBackground2 = document.querySelector(
+		`#${productType}-header .classics-header__text-bg2`
+	);
+	const textTop = document.querySelector(
+		`#${productType}-header .classics-header__text-top`
+	) as HTMLElement;
+	const textMiddle = document.querySelector(
+		`#${productType}-header .classics-header__text-middle`
+	) as HTMLElement;
+	const textBottom = document.querySelector(
+		`#${productType}-header .classics-header__text-bottom`
+	) as HTMLElement;
+	const textBottomShoe = document.querySelector(
+		`#${productType}-header .classics-header__text-bottom h1`
+	);
+
+	textBackground1.classList.add(
+		HeaderAssets[`${productType}`].text.backgroundImg1.animation
+	);
+	textBackground2.classList.add(
+		HeaderAssets[`${productType}`].text.backgroundImg2.animation
+	);
+	textTop.classList.add(HeaderAssets[`${productType}`].text.textTop.animation);
+	textTop.style.animationDelay =
+		HeaderAssets[`${productType}`].text.textTop.animationDelay;
+	textMiddle.classList.add(
+		HeaderAssets[`${productType}`].text.textMiddle.animation
+	);
+	textMiddle.style.animationDelay =
+		HeaderAssets[`${productType}`].text.textMiddle.animationDelay;
+	textBottom.classList.add(
+		HeaderAssets[`${productType}`].text.textBottom.animation
+	);
+	textBottom.style.animationDelay =
+		HeaderAssets[`${productType}`].text.textBottom.animationDelay;
+	textBottomShoe.textContent =
+		HeaderAssets[`${productType}`].text.textBottomShoe.text;
+
+	for (let i = 0; i < imageCount; i++) {
+		headerImageUrls.push(HeaderAssets[`${productType}`].desktop[`${i}`].url);
+		headerImageStyles.push(
+			HeaderAssets[`${productType}`].desktop[`${i}`].style
+		);
+		headerImageAnimations.push(
+			HeaderAssets[`${productType}`].desktop[`${i}`].animation
+		);
+		const headerDesktopImages = document.querySelector(
+			`#${productType}-header__img--${i}`
+		) as HTMLElement;
+		const headerMobileImage = document.querySelector(
+			`#${productType}-header__img--mobile`
+		) as HTMLElement;
+
+		if (window.matchMedia('(min-width: 760px)').matches) {
+			headerDesktopImages.setAttribute('src', headerImageUrls[i]);
+			Object.assign(headerDesktopImages.style, headerImageStyles[i]);
+			headerDesktopImages.classList.add(headerImageAnimations[i]);
+		} else {
+			headerMobileImage.setAttribute('src', mobileHeaderImageUrl);
+			Object.assign(headerMobileImage.style, mobileHeaderImageStyle);
+			headerMobileImage.classList.add(mobileHeaderImageAnimation);
+		}
+	}
+}
+
 /* Generate Randomized Product Blocks */
 function generateProducts(productType: string, imageCount: number) {
 	const shuffledArray = shuffleProducts(
@@ -88,7 +165,7 @@ function generateProducts(productType: string, imageCount: number) {
 	const mobileProductGrids = [];
 	const mobileProductStyles = [];
 
-	for (i = 0; i < imageCount; i++) {
+	for (let i = 0; i < imageCount; i++) {
 		const vn = shuffledArray[i].vn;
 		const alt = shuffledArray[i].alt;
 		const blockImage = document.querySelector(
@@ -160,7 +237,7 @@ function generateCutout(productType: string, imageCount: number) {
 	const mobileCutoutGrids = [];
 	const mobileCutoutBlockStyles = [];
 
-	for (i = 0; i < imageCount; i++) {
+	for (let i = 0; i < imageCount; i++) {
 		const blockTitle = document.querySelector(
 			`#${productType}-cutout${i} .classics-body__block-title`
 		);
@@ -241,7 +318,7 @@ function generateLifestyle(productType: string, imageCount: number) {
 	const mobileLifestyleGrids = [];
 	const mobileLifestyleStyles = [];
 
-	for (i = 0; i < imageCount; i++) {
+	for (let i = 0; i < imageCount; i++) {
 		const blockImage = document.querySelector(
 			`#${productType}-lifestyle${i} .classics-body__block-lifestyle`
 		);
@@ -283,14 +360,6 @@ function generateLifestyle(productType: string, imageCount: number) {
 	}
 }
 
-/* Initialize Variables */
-let headerImages = [];
-let headerUrls = [];
-let headerImagesStyles = [];
-let headerImagesAnimations = [];
-
-let i: number;
-
 /* Initialize Navigo router */
 declare var Navigo: any;
 const root = null;
@@ -311,45 +380,7 @@ router
 		$('.era-link').css('color', 'white');
 
 		/**** header section ****/
-		$('.classics-header__text-bg1').addClass('animated slideInDown');
-		$('.classics-header__text-bg2').addClass('animated slideInUp');
-		$('.classics-header__text-top')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '.75s' });
-		$('.classics-header__text-middle')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '1s' });
-		$('.classics-header__text-bottom--auto')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '1.25s' });
-		$('.classics-header__text-bottom--auto h1')
-			.css({
-				display: 'block'
-			})
-			.text('Era.');
-		$('.classics-header__text-bottom--static h1').text('');
-
-		if (window.matchMedia('(min-width: 760px)').matches) {
-			for (i = 1; i < 4; i++) {
-				headerImages.push(document.getElementById(`all-header__img--${i}`));
-				headerUrls.push(HeaderImages.all[`img${i}`].url);
-				headerImagesStyles.push(HeaderImages.all[`img${i}`].style);
-				headerImagesAnimations.push(HeaderImages.all[`img${i}`].animation);
-			}
-
-			for (i = 0; i < headerImages.length; i++) {
-				headerImages[i].setAttribute('src', headerUrls[i]);
-				Object.assign(headerImages[i].style, headerImagesStyles[i]);
-				headerImages[i].classList.add(headerImagesAnimations[i]);
-			}
-		} else {
-			const mobileHeaderImage = document.getElementById(
-				'all-header__img--mobile'
-			);
-			mobileHeaderImage.setAttribute('src', HeaderImages.all.mobileImg.url);
-			Object.assign(mobileHeaderImage.style, HeaderImages.all.mobileImg.style);
-			mobileHeaderImage.classList.add(HeaderImages.all.mobileImg.animation);
-		}
+		generateHeader('all', 3);
 
 		/**** description ****/
 		$('.classics-description')
@@ -384,42 +415,7 @@ router
 		$('.era-link').css('color', '#c9192e');
 
 		/**** header section ****/
-		$('.classics-header__text-bg1').addClass('animated slideInDown');
-		$('.classics-header__text-bg2').addClass('animated slideInUp');
-		$('.classics-header__text-top')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '.75s' });
-		$('.classics-header__text-middle')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '1s' });
-		$('.classics-header__text-bottom--static')
-			.addClass('animated fadeIn')
-			.css({ animationDelay: '1.25s' });
-		$('.classics-header__text-bottom--auto h1').css({
-			display: 'none'
-		});
-		$('.classics-header__text-bottom--static h1').text('Era.');
-
-		if (window.matchMedia('(min-width: 760px)').matches) {
-			for (i = 1; i < 3; i++) {
-				headerImages.push(document.getElementById(`era-header__img--${i}`));
-				headerUrls.push(HeaderImages.era[`img${i}`].url);
-				headerImagesStyles.push(HeaderImages.era[`img${i}`].style);
-				headerImagesAnimations.push(HeaderImages.era[`img${i}`].animation);
-			}
-			for (i = 0; i < headerImages.length; i++) {
-				headerImages[i].setAttribute('src', headerUrls[i]);
-				Object.assign(headerImages[i].style, headerImagesStyles[i]);
-				headerImages[i].classList.add(headerImagesAnimations[i]);
-			}
-		} else {
-			const mobileHeaderImage = document.getElementById(
-				`era-header__img--mobile`
-			);
-			mobileHeaderImage.setAttribute('src', HeaderImages.era.mobileImg.url);
-			Object.assign(mobileHeaderImage.style, HeaderImages.era.mobileImg.style);
-			mobileHeaderImage.classList.add(HeaderImages.era.mobileImg.animation);
-		}
+		generateHeader('era', 2);
 
 		/**** description ****/
 		$('.classics-description').text(

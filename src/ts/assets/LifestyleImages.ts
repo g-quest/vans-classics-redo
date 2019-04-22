@@ -11,7 +11,7 @@ class LifestyleImages {
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-1?wid=1576&fmt=png-alpha',
 			desktop: {
 				gridArea: '2 / 3 / 5 / 5',
-				ease: '{"y": "50"}',
+				ease: '{"y": "-50"}',
 				style: {
 					justifySelf: 'start',
 					width: '88%'
@@ -31,11 +31,11 @@ class LifestyleImages {
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-static-2?wid=1586&fmt=png-alpha',
 			desktop: {
 				gridArea: '4 / 1 / 6 / 3',
-				ease: '{"y": "-50"}',
+				ease: '{"y": "50"}',
 				style: {
 					margin: '0',
 					width: '90%',
-					transform: 'translate(-5%, -15%)'
+					transform: 'translate(-5%, -5%)'
 				}
 			},
 			mobile: {

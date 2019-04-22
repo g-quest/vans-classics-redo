@@ -3,59 +3,24 @@ extends layout/layout
 block main
   .classics-container
     
-    .classics-header
-      .classics-header__text
-        .classics-header__text-bg1
-          img(src="https://images.vans.com/is/image/VansBrand/sp19-core-classics-header-paper-2?wid=720")
-        .classics-header__text-bg2
-          img(src="https://images.vans.com/is/image/VansBrand/sp19-core-classics-header-paper-1?wid=844")     
-        .classics-header__text-top
-          h1 This
-        .classics-header__text-middle
-          h1 is the
-        .classics-header__text-bottom--auto
-          h1 
-        .classics-header__text-bottom--static
-          h1 
-            
-      #all-header      
+    .classics-header            
+      #all-header
+        +headerText
         .classics-header__imgs
-          img.animated(id="all-header__img--mobile")          
-          img.animated(id="all-header__img--1")
-          img.animated(id="all-header__img--2" )
-          img.animated(id="all-header__img--3")
+          +headerImage('all-header__img--mobile')
+          +headerImage('all-header__img--0')
+          +headerImage('all-header__img--1')
+          +headerImage('all-header__img--2')
         
-      #era-header  
+      #era-header
+        +headerText
         .classics-header__imgs
-          img.animated(id="era-header__img--mobile")  
-          img.animated(id="era-header__img--1")
-          img.animated(id="era-header__img--2" )
+          +headerImage('era-header__img--mobile')
+          +headerImage('era-header__img--0')
+          +headerImage('era-header__img--1')
   
-    #subnav--mobile
-      .classics-subnav--mobile
-        p.classics-subnav--mobile__text MENU
-          img.classics-subnav--mobile__icon(src='https://images.vans.com/is/image/VansBrand/sp19-core-classics-menu-icon?wid=240&fmt=png-alpha')
-      .classics-subnav--mobile__pane
-        ul.classics-subnav--mobile__pane-ul
-          +subnavLinkMobile('all-link', '#', 'CLASSICS')
-          +subnavLinkMobile('era-link', '#era', 'ERA')
-          
-          li.classics-subnav--mobile__pane-item
-            a.classics-subnav--mobile__pane-link(href='https://www.vans.com/utility/store-locator.html') FIND A DEALER
-          
-          li.classics-subnav--mobile__pane-item.classics-subnav--mobile__pane-button
-            a.classics-subnav--mobile__pane-link(href='https://www.vans.com/shop/shoes-classics-original-classics') SHOP NOW
-
-     
-    #subnav--desktop.classics-subnav
-      .classics-subnav__wrapper
-        .classics-subnav--left
-          +subnavLink('all-link', '#', 'CLASSICS')
-          | /
-          +subnavLink('era-link', '#era', 'ERA')
-        .classics-subnav--right
-          +subnavLink('', 'https://www.vans.com/utility/store-locator.html', 'FIND A DEALER')
-          +subnavLink('classics-subnav__button', 'https://www.vans.com/shop/shoes-classics-original-classics', 'SHOP NOW')
+    +subnavMobile
+    +subnavDesktop
           
     .classics-description
   
@@ -95,6 +60,5 @@ block main
         +productBlock('era-product7')
         +lifestyleBlock('era-lifestyle4') 
                         
-    .classics-subfooter
-      a(href="https://www.vans.com/shop/shoes-classics-original-classics")
-        .button(class="classics-subfooter__button")
+    +subfooter
+    
