@@ -2,6 +2,14 @@
 /**** Functions ****/
 /*******************/
 
+/* Initialize Parallax Scroll */
+declare var ParallaxScroll: any;
+ParallaxScroll.init();
+
+/* Initialize WOW.js */
+declare var WOW: any;
+new WOW().init();
+
 /* Change text automatically on 'ALL' page */
 let textIndex: number = 0;
 const text = ['Era.', 'Sk8-Hi.', 'Slip-On.', 'Authentic.', 'Old-Skool.'];
@@ -45,13 +53,11 @@ if (window.matchMedia('(max-width: 760px)').matches) {
 	};
 }
 
-/* Initialize Parallax Scroll */
-declare var ParallaxScroll: any;
-ParallaxScroll.init();
-
-/* Initialize WOW.js */
-declare var WOW: any;
-new WOW().init();
+/* Ensure page loads from the top on route click */
+$('.era-link').click(() => {
+	// TweenMax.to($('html, body'), 1, { scrollTop: 0 });
+	window.scrollTo(0, 0);
+});
 
 /* Shuffle Product Array */
 function shuffleProducts(productArray) {
@@ -226,6 +232,7 @@ function generateProducts(productType: string) {
 			Object.assign(blockStyle.style, productStyles[i]);
 		} else {
 			blockGrid.style.gridArea = mobileProductGrids[i];
+			blockGrid.classList.add('fadeInUp');
 			Object.assign(blockStyle.style, mobileProductStyles[i]);
 		}
 	}
@@ -320,6 +327,7 @@ function generateCutout(productType: string) {
 			Object.assign(blockBackgroundImage.style, cutoutBackgroundImageStyles[i]);
 		} else {
 			blockGrid.style.gridArea = mobileCutoutGrids[i];
+			blockGrid.classList.add('fadeInUp');
 			Object.assign(blockStyle.style, mobileCutoutBlockStyles[i]);
 			Object.assign(blockImage.style, mobileCutoutImageStyles[i]);
 			Object.assign(
@@ -377,6 +385,7 @@ function generateLifestyle(productType: string) {
 			Object.assign(blockStyle.style, lifestyleStyles[i]);
 		} else {
 			blockGrid.style.gridArea = mobileLifestyleGrids[i];
+			blockGrid.classList.add('fadeInUp');
 			Object.assign(blockStyle.style, mobileLifestyleStyles[i]);
 		}
 	}

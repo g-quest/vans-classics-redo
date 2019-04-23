@@ -344,3 +344,25 @@ img {
 .sticky + .classics-subnav + .classics-description {
 	padding-top: 25px;
 }
+
+.vans-loading {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 200px;
+	pointer-events: none;
+	user-select: none;
+	z-index: 100;
+	opacity: 0;
+	.dot {
+		visibility: hidden;
+	}
+	svg {
+		width: 100%;
+		.st0 {
+			fill: #000;
+		}
+	}
+}

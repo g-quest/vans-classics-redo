@@ -1,6 +1,7 @@
 extends layout/layout
 
 block main
+  .vans-loading
   .classics-container
     
     .classics-header            
@@ -32,15 +33,16 @@ block main
         +lifestyleBlock('all-lifestyle0')
         +lifestyleBlock('all-lifestyle1')
         +cutoutBlock('all-cutout0')
+        +lifestyleBlock('all-lifestyle2') 
         +productBlock('all-product3')  
         +productBlock('all-product4')  
-        +lifestyleBlock('all-lifestyle2') 
         +productBlock('all-product5')              
         +productBlock('all-product6')
         +productBlock('all-product7') 
         +cutoutBlock('all-cutout1')
-        +productBlock('all-product8')
         +lifestyleBlock('all-lifestyle3')
+        +productBlock('all-product8')
+
 
     #era-body      
       .classics-body
@@ -57,8 +59,8 @@ block main
         +productBlock('era-product5')
         +productBlock('era-product6')      
         +cutoutBlock('era-cutout1')
-        +productBlock('era-product7')
         +lifestyleBlock('era-lifestyle4') 
+        +productBlock('era-product7')
                         
     +subfooter
     
