@@ -74,7 +74,8 @@ function shuffleProducts(productArray) {
 }
 
 /* Generate Header */
-function generateHeader(productType: string, imageCount: number) {
+function generateHeader(productType: string) {
+	const imageCount = HeaderAssets[`${productType}`].desktop.length;
 	const mobileHeaderImageUrl = HeaderAssets[`${productType}`].mobile.url;
 	const mobileHeaderImageStyle = HeaderAssets[`${productType}`].mobile.style;
 	const mobileHeaderImageAnimation =
@@ -151,8 +152,16 @@ function generateHeader(productType: string, imageCount: number) {
 	}
 }
 
+/* Generate Description */
+function generateDescription(productType: string) {
+	const description = document.querySelector(`.classics-description`);
+	const descriptionText = MiscAssets[`${productType}`].description.text;
+	description.textContent = descriptionText;
+}
+
 /* Generate Randomized Product Blocks */
-function generateProducts(productType: string, imageCount: number) {
+function generateProducts(productType: string) {
+	const imageCount = ProductStyles[`${productType}`].length;
 	const shuffledArray = shuffleProducts(
 		ProductAssets[`${productType}`].slice()
 	).slice(0, imageCount);
@@ -223,7 +232,8 @@ function generateProducts(productType: string, imageCount: number) {
 }
 
 /* Generate Cutout Product Blocks */
-function generateCutout(productType: string, imageCount: number) {
+function generateCutout(productType: string) {
+	const imageCount = CutoutImages[`${productType}`].length;
 	const cutoutTypes = [];
 	const cutoutPrices = [];
 	const cutoutImageUrls = [];
@@ -310,7 +320,8 @@ function generateCutout(productType: string, imageCount: number) {
 }
 
 /* Generate Lifestyle Images */
-function generateLifestyle(productType: string, imageCount: number) {
+function generateLifestyle(productType: string) {
+	const imageCount = LifestyleImages[`${productType}`].length;
 	const lifestyleImages = [];
 	const lifestyleGrids = [];
 	const lifestyleStyles = [];
@@ -360,6 +371,26 @@ function generateLifestyle(productType: string, imageCount: number) {
 	}
 }
 
+/* Generate Subfooter */
+function generateSubfooter(productType: string) {
+	const subfooter = document.querySelector(`.classics-subfooter a`);
+	const subfooterButton = document.querySelector(`.classics-subfooter__button`);
+	const subfooterCta = MiscAssets[`${productType}`].subfooter.text;
+	const subfooterUrl = MiscAssets[`${productType}`].subfooter.url;
+	subfooterButton.textContent = subfooterCta;
+	subfooter.setAttribute('href', subfooterUrl);
+}
+
+/* Generate Route Layout */
+function generateLayout(productType: string) {
+	generateHeader(productType); // header section
+	generateDescription(productType); // description section
+	generateProducts(productType); // product images
+	generateCutout(productType); // cutout product images
+	generateLifestyle(productType); // lifestyle images
+	generateSubfooter(productType); // subfooter cta
+}
+
 /* Initialize Navigo router */
 declare var Navigo: any;
 const root = null;
@@ -370,7 +401,6 @@ const router = new Navigo(root, useHash, hash);
 /***************************/
 /**** All Classics Page ****/
 /***************************/
-
 router
 	.on(() => {
 		$('#all-header, #all-body').css('display', 'block');
@@ -379,25 +409,7 @@ router
 		$('.all-link').css('color', '#c9192e');
 		$('.era-link').css('color', 'white');
 
-		/**** header section ****/
-		generateHeader('all', 3);
-
-		/**** description ****/
-		$('.classics-description')
-			.text('') // none for main page
-			.css({ marginTop: '50px' });
-
-		/**** product images ****/
-		generateProducts('all', 9);
-
-		/**** cutout product images ****/
-		generateCutout('all', 2);
-
-		/**** lifestyle images ****/
-		generateLifestyle('all', 4);
-
-		/**** subfooter cta ****/
-		$('.classics-subfooter__button').text('SHOP ALL CLASSICS');
+		generateLayout('all');
 	})
 	.resolve();
 
@@ -406,32 +418,12 @@ router
 /******************/
 router
 	.on('era', () => {
-		$('#era-body').css('display', 'block');
-		$('#all-body').css('display', 'none');
-		$('#era-header').css('display', 'block');
-		$('#all-header').css('display', 'none');
+		$('#era-body, #era-header').css('display', 'block');
+		$('#all-body, #all-header').css('display', 'none');
 
 		$('.all-link').css('color', 'white');
 		$('.era-link').css('color', '#c9192e');
 
-		/**** header section ****/
-		generateHeader('era', 2);
-
-		/**** description ****/
-		$('.classics-description').text(
-			'The Vans Era was the first shoe designed for skateboarders by skateboarders. Introduced in 1976 and originally called the Style #95, the Era was made popular by the legendary Z-Boys and remains the shoe of choice for skaters, surfers, and creative people worldwide.'
-		);
-
-		/**** product images ****/
-		generateProducts('era', 8);
-
-		/**** cutout product images ****/
-		generateCutout('era', 2);
-
-		/**** lifestyle images ****/
-		generateLifestyle('era', 5);
-
-		/**** subfooter cta ****/
-		$('.classics-subfooter__button').text('SHOP ALL ERAS');
+		generateLayout('era');
 	})
 	.resolve();
