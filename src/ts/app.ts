@@ -233,7 +233,11 @@ function generateProducts(productType: string) {
 
 /* Generate Cutout Product Blocks */
 function generateCutout(productType: string) {
-	const imageCount = CutoutImages[`${productType}`].length;
+	const imageCount = CutoutStyles[`${productType}`].length;
+	const shuffledArray = shuffleProducts(
+		CutoutAssets[`${productType}`].slice()
+	).slice(0, imageCount);
+	const cutoutUrl = [];
 	const cutoutTypes = [];
 	const cutoutPrices = [];
 	const cutoutImageUrls = [];
@@ -266,40 +270,47 @@ function generateCutout(productType: string) {
 		const blockStyle = document.querySelector(
 			`#${productType}-cutout${i} .classics-body__block-content`
 		) as HTMLElement;
+		const blockImageLink = document.querySelector(
+			`#${productType}-cutout${i} .classics-body__block-content a`
+		) as HTMLElement;
 
-		cutoutTypes.push(CutoutImages[`${productType}`][`${i}`].type);
-		cutoutPrices.push(CutoutImages[`${productType}`][`${i}`].price);
-		cutoutImageUrls.push(CutoutImages[`${productType}`][`${i}`].url);
+		cutoutUrl.push(shuffledArray[i].url);
+		cutoutTypes.push(shuffledArray[i].type);
+		cutoutPrices.push(shuffledArray[i].price);
+		cutoutImageUrls.push(shuffledArray[i].imgUrl);
+
 		cutoutBackgroundImageUrls.push(
-			CutoutImages[`${productType}`][`${i}`].backgroundImgUrl
+			CutoutStyles[`${productType}`][`${i}`].backgroundImgUrl
 		);
 		cutoutImageStyles.push(
-			CutoutImages[`${productType}`][`${i}`].desktop.imgStyle
+			CutoutStyles[`${productType}`][`${i}`].desktop.imgStyle
 		);
 
 		mobileCutoutImageStyles.push(
-			CutoutImages[`${productType}`][`${i}`].mobile.imgStyle
+			CutoutStyles[`${productType}`][`${i}`].mobile.imgStyle
 		);
 		cutoutBackgroundImageStyles.push(
-			CutoutImages[`${productType}`][`${i}`].desktop.backgroundStyle
+			CutoutStyles[`${productType}`][`${i}`].desktop.backgroundStyle
 		);
 		mobileCutoutBackgroundImageStyles.push(
-			CutoutImages[`${productType}`][`${i}`].mobile.backgroundStyle
+			CutoutStyles[`${productType}`][`${i}`].mobile.backgroundStyle
 		);
-		cutoutGrids.push(CutoutImages[`${productType}`][`${i}`].desktop.gridArea);
+		cutoutGrids.push(CutoutStyles[`${productType}`][`${i}`].desktop.gridArea);
 		mobileCutoutGrids.push(
-			CutoutImages[`${productType}`][`${i}`].mobile.gridArea
+			CutoutStyles[`${productType}`][`${i}`].mobile.gridArea
 		);
 		cutoutBlockStyles.push(
-			CutoutImages[`${productType}`][`${i}`].desktop.style
+			CutoutStyles[`${productType}`][`${i}`].desktop.style
 		);
 		mobileCutoutBlockStyles.push(
-			CutoutImages[`${productType}`][`${i}`].mobile.style
+			CutoutStyles[`${productType}`][`${i}`].mobile.style
 		);
 
 		blockTitle.textContent = cutoutTypes[i];
+		blockTitle.setAttribute('href', cutoutUrl[i]);
 		blockPrice.textContent = cutoutPrices[i];
 		blockImage.setAttribute('src', cutoutImageUrls[i]);
+		blockImageLink.setAttribute('href', cutoutUrl[i]);
 		blockBackgroundImage.setAttribute('src', cutoutBackgroundImageUrls[i]);
 
 		if (window.matchMedia('(min-width: 760px)').matches) {
@@ -321,7 +332,7 @@ function generateCutout(productType: string) {
 
 /* Generate Lifestyle Images */
 function generateLifestyle(productType: string) {
-	const imageCount = LifestyleImages[`${productType}`].length;
+	const imageCount = LifestyleAssets[`${productType}`].length;
 	const lifestyleImages = [];
 	const lifestyleGrids = [];
 	const lifestyleStyles = [];
@@ -341,21 +352,21 @@ function generateLifestyle(productType: string) {
 			`#${productType}-lifestyle${i} .classics-body__block-content`
 		) as HTMLElement;
 
-		lifestyleImages.push(LifestyleImages[`${productType}`][`${i}`].url);
+		lifestyleImages.push(LifestyleAssets[`${productType}`][`${i}`].url);
 		lifestyleGrids.push(
-			LifestyleImages[`${productType}`][`${i}`].desktop.gridArea
+			LifestyleAssets[`${productType}`][`${i}`].desktop.gridArea
 		);
 		lifestyleStyles.push(
-			LifestyleImages[`${productType}`][`${i}`].desktop.style
+			LifestyleAssets[`${productType}`][`${i}`].desktop.style
 		);
 		lifestyleEasings.push(
-			LifestyleImages[`${productType}`][`${i}`].desktop.ease
+			LifestyleAssets[`${productType}`][`${i}`].desktop.ease
 		);
 		mobileLifestyleGrids.push(
-			LifestyleImages[`${productType}`][`${i}`].mobile.gridArea
+			LifestyleAssets[`${productType}`][`${i}`].mobile.gridArea
 		);
 		mobileLifestyleStyles.push(
-			LifestyleImages[`${productType}`][`${i}`].mobile.style
+			LifestyleAssets[`${productType}`][`${i}`].mobile.style
 		);
 
 		blockImage.setAttribute('src', lifestyleImages[i]);
@@ -388,7 +399,7 @@ function generateLayout(productType: string) {
 	generateProducts(productType); // product images
 	generateCutout(productType); // cutout product images
 	generateLifestyle(productType); // lifestyle images
-	generateSubfooter(productType); // subfooter cta
+	generateSubfooter(productType); // subfooter section
 }
 
 /* Initialize Navigo router */

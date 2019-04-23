@@ -4,7 +4,7 @@
 
 /* Do not touch unless design changes are required */
 
-class LifestyleImages {
+class LifestyleAssets {
 	public static all = [
 		{
 			url:

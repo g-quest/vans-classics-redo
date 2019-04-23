@@ -284,8 +284,8 @@ img {
 			transition: 0.2s ease-in-out;
 			&:hover {
 				@media #{$md-desktop} {
-					-webkit-transform: scale(1.1) translateY(-5%);
-					transform: scale(1.1) translateY(-5%);
+					-webkit-transform: scale(1.15) translateY(-5%);
+					transform: scale(1.15) translateY(-5%);
 					cursor: pointer;
 				}
 			}
