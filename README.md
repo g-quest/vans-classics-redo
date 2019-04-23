@@ -7,11 +7,13 @@ Assets are separated into different classes under the ts/assets folder. Generati
 Products show up randomized on each reload and each route click. This provides each page with a dynamic feel. This is done by first cloning the original array of product objects, shuffling the indexes with the shuffleProducts() function (also located within the app.ts file), slicing it to match the layout count, then mapping each index properly to the values of each block.
 
 Pages completed so far:
-All Classics (root)
-Era (#era)
+
+- All Classics (root),
+- Era (#era)
 
 Next up:
-Sk8-Hi
+
+- Sk8-Hi
 
 ## Project Source Files
 
