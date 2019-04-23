@@ -1,8 +1,17 @@
 # Vans Core Classics SP19
 
-Core Classics redo using Single Page Application (SPA) architecture. Routing is done with Navigo, where components are swapped out on route clicks.
+This is the Classics redo using a Single Page Application (SPA) architecture. Routing is done with Navigo, where components are swapped out on route clicks.
 
-W.I.P. : Next step will be to refactor TypeScript and put everything into classes for easy updates in the future.
+Assets are separated into different classes under the ts/assets folder. Generative functions are used to pull values accordingly in the main app.ts file. This allows for easy maintenance and updates for the future (when adding the other shoes, for example)
+
+Products show up randomized on each reload and each route click. This provides each page with a dynamic feel. This is done by first cloning the original array of product objects, shuffling the indexes with the shuffleProducts() function (also located within the app.ts file), slicing it to match the layout count, then mapping each index properly to the values of each block.
+
+Pages completed so far:
+All Classics (root)
+Era (#era)
+
+Next up:
+Sk8-Hi
 
 ## Project Source Files
 
