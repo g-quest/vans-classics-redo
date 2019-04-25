@@ -14,7 +14,8 @@ class LifestyleAssets {
 				ease: '{"y": "-50"}',
 				style: {
 					justifySelf: 'start',
-					width: '88%'
+					width: '88%',
+					transform: 'translate(0, 15%)'
 				}
 			},
 			mobile: {
@@ -35,7 +36,7 @@ class LifestyleAssets {
 				style: {
 					margin: '0',
 					width: '90%',
-					transform: 'translate(-5%, -5%)'
+					transform: 'translate(-5%, -15%)'
 				}
 			},
 			mobile: {

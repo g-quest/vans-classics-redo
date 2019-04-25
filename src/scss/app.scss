@@ -316,6 +316,9 @@ img {
 	background-image: url('https://images.vans.com/is/image/VansBrand/sp19-core-classics-bg-black?wid=800');
 	background-position: center;
 	background-repeat: repeat-x;
+	@media #{$md-desktop} {
+		margin-top: -225px;
+	}
 	&__button {
 		display: block;
 		margin: 10% auto;

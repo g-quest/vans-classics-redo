@@ -169,7 +169,9 @@ class ProductStyles {
 				style: {
 					justifySelf: 'end',
 					width: '75%',
-					padding: '0'
+					padding: '0',
+					transform: 'translateY(-5%)',
+					marginTop: '15px'
 				}
 			},
 			mobile: {

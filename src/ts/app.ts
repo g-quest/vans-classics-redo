@@ -29,6 +29,11 @@ setInterval(changeText, 1000);
 $('.classics-subnav--mobile').click(() => {
 	$('.classics-subnav--mobile__pane').slideToggle(250);
 });
+$('.era-link, .all-link').click(() => {
+	if (window.matchMedia('(max-width: 760px)').matches) {
+		$('.classics-subnav--mobile__pane').slideToggle(250);
+	}
+});
 
 /* Sticky subnav */
 const desktopSubnav = document.getElementById('subnav--desktop');
