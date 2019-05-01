@@ -18,25 +18,24 @@ class CutoutAssets {
 			url:
 				'https://www.vans.com/shop/shoes-classics-original-classics/checkerboard-slip-on-rumba-red-true-white#hero=4',
 			type: 'Slip-On',
-			price: '$65.00',
+			price: '$50.00',
 			imgUrl:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-slipon-2?wid=473&fmt=png-alpha'
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-slipon-cutout?wid=473&fmt=png-alpha'
 		}
 	];
 	public static era = [
 		{
-			url:
-				'https://www.vans.com/shop/shoes-classics-original-classics/era-navy#hero=3',
+			url: 'https://www.vans.com/shop/era-black-black#hero=3',
 			type: 'Era',
-			price: '$65.00',
+			price: '$50.00',
 			imgUrl:
-				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-6?wid=561&fmt=png-alpha'
+				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-cutout?wid=561&fmt=png-alpha'
 		},
 		{
 			url:
 				'https://www.vans.com/shop/shoes-classics-original-classics/checkerboard-era-lapis-blue-true-white#hero=4',
 			type: 'Era',
-			price: '$65.00',
+			price: '$50.00',
 			imgUrl:
 				'https://images.vans.com/is/image/VansBrand/sp19-core-classics-era-9?wid=548&fmt=png-alpha'
 		}

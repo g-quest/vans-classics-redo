@@ -68,7 +68,7 @@ class CutoutStyles {
 					zIndex: '1'
 				},
 				backgroundStyle: {
-					transform: 'scale(0.5) translate(-45%, -90%)',
+					transform: 'scale(0.5) translate(-45%, -55%)',
 					zIndex: '0'
 				}
 			}
